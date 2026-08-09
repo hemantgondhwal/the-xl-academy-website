@@ -312,10 +312,12 @@ footer a:hover{color:var(--orange)}
 .highlight-lbl{font-size:13px;color:rgba(255,255,255,.55);margin-top:6px}
 
 /* Placement companies strip */
-.companies-strip{background:var(--bg-soft);padding:40px 0}
-.co-label{text-align:center;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
-.co-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.co-logo{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 20px;font-size:13px;font-weight:600;color:var(--muted)}
+.companies-strip{background:var(--bg-soft);padding:44px 0}
+.co-label{text-align:center;font-size:13px;font-weight:700;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:26px}
+.co-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;align-items:center}
+.co-logo{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 24px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(8,16,72,.04);transition:all .25s ease}
+.co-logo:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 6px 18px rgba(8,16,72,.1)}
+.co-logo svg{height:24px;width:auto;display:block}
 
 /* =============================================
    PLACEMENT GALLERY

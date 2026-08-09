@@ -20,6 +20,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
   .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(27,43,107,.3),transparent),linear-gradient(135deg,#0d1f80 0%,#1B2B6B 50%,#253C8F 100%)}
   .mod-num{background:linear-gradient(135deg,#1B2B6B,#253C8F)}
+
+  /* Course Syllabus (AWDiz Accordion Layout — Navy Blue & Vibrant Orange Theme) */
+  .syllabus-section{background:var(--bg-soft);padding:60px 0}
+  .syllabus-top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:16px}
+  .syllabus-toggle-btn{background:#fff;border:1.5px solid var(--orange);color:var(--orange-d);font-size:13px;font-weight:700;padding:8px 20px;border-radius:50px;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(255,107,0,.12)}
+  .syllabus-toggle-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange-d);transform:translateY(-1px)}
+  .syllabus-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:900px;margin:0 auto}
+  .syllabus-card{background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden;transition:all .25s ease;box-shadow:0 2px 8px rgba(8,16,72,.04)}
+  .syllabus-card:hover{border-color:var(--orange);transform:translateY(-2px)}
+  .syllabus-card.active{border-color:var(--navy);box-shadow:0 6px 22px rgba(8,16,72,.16)}
+  .syllabus-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fff;cursor:pointer;user-select:none;transition:background .25s,color .25s}
+  .syllabus-card.active .syllabus-header{background:linear-gradient(135deg,var(--navy) 0%,#1a3276 100%);color:#fff}
+  .syllabus-title-wrap{display:flex;align-items:center;gap:14px}
+  .syllabus-dot-box{width:28px;height:28px;border-radius:50%;background:#fff3eb;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+  .syllabus-dot-inner{width:10px;height:10px;border-radius:50%;background:var(--orange);transition:background .25s}
+  .syllabus-card.active .syllabus-dot-box{background:var(--orange);border-color:var(--gold)}
+  .syllabus-card.active .syllabus-dot-inner{background:#fff}
+  .syllabus-title{font-size:16px;font-weight:700;color:var(--navy);line-height:1.35}
+  .syllabus-card.active .syllabus-title{color:#fff}
+  .syllabus-arrow{width:28px;height:28px;border-radius:50%;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--navy);transition:transform .3s ease,background .2s,color .2s;flex-shrink:0}
+  .syllabus-card.active .syllabus-arrow{background:var(--orange);color:#fff;transform:rotate(180deg)}
+  .syllabus-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(0,1,0,1),padding .3s ease;padding:0 22px;background:#fafbfc}
+  .syllabus-card.active .syllabus-body{max-height:2400px;transition:max-height .5s ease-in-out,padding .3s ease;padding:22px;border-top:1px solid rgba(8,16,72,.08)}
+  .syllabus-topics{list-style:none;display:grid;gap:11px;padding:0;margin:0}
+  .syllabus-topic{font-size:13.5px;color:var(--ink);line-height:1.55;display:flex;align-items:flex-start;gap:10px}
+  .syllabus-topic::before{content:"✓";color:var(--orange-d);font-weight:800;font-size:13px;flex-shrink:0;margin-top:2px}
+  .syllabus-badge{display:inline-block;background:#fff3eb;color:var(--orange-d);border:1px solid rgba(255,107,0,.2);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:6px;white-space:nowrap}
 </style>
 <link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
 </head>
@@ -140,6 +167,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- Course Syllabus Section (AWDiz Style Accordion Layout — Navy & Orange Theme) -->
+<section class="section syllabus-section" id="syllabus">
+  <div class="container">
+    <div class="syllabus-top-bar">
+      <div class="section-head" style="margin-bottom:0;text-align:left">
+        <span class="eyebrow">Detailed Curriculum</span>
+        <h2>Python Course Syllabus</h2>
+        <p>Comprehensive 40 Hours / 20 Sessions Training — Module-by-Module Breakdown</p>
+      </div>
+      <button class="syllabus-toggle-btn" id="toggleAllBtn" onclick="toggleAllSyllabus()">
+        <span>▼</span> <span id="toggleAllTxt">Collapse Module</span>
+      </button>
+    </div>
+
+    <div class="syllabus-grid">
+      <!-- Module Python + Statistics + Pyspark -->
+      <div class="syllabus-card active">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">Python + Statistics + Pyspark</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 1</span>What is Python, Brief History, Career Opportunities, Installing Python, Anaconda &amp; IDE Overview</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 2</span>First Python Program, Objects, Data Types, Immutable vs Mutable, Object Referencing &amp; Operators</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 3</span>%Run &amp; %Load Commands, Strings, Escape Characters, F-String Formatting, Input Statements, Indexing, Slicing &amp; Dicing</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 4</span>Lists, Tuples, Dictionaries, Sets &amp; Control Flow Statements (If-Else Conditions)</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 5</span>For Loops, Enumerator for Iterations, Break/Continue Statements, Nested Loops &amp; While Loops</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 6</span>List Methods, List Comprehension (with If-Else), Tuple Methods &amp; Tuple Comprehension</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 7</span>Dictionary Methods, Dictionary Comprehension, String Methods &amp; Regular Expressions (Regex)</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 8</span>Functions in Python, Lambda Expressions, Map, Filter, Reduce, Zip, Accumulate &amp; Decorators</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 9</span>Modules, Datetime Classes, Iterables vs Iterators, Generators &amp; Generator vs List Performance</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 10</span>Statistics Fundamentals: Population vs Sample, Sampling Techniques, Charts/Graphs &amp; Measures of Central Tendency</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 11</span>Measure of Dispersion, Normalization vs Standardization (Z-Score), 5-Number Summary, Probability &amp; Math/NumPy Practical</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 12</span>OOPs Concepts: Class &amp; Objects, __init__ / __str__ Methods, Abstraction, Inheritance, Super(), Encapsulation &amp; Polymorphism</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 13</span>File Handling in Python, File Modes, 'with' Statement, Exception Handling &amp; Try-Except Blocks</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 14</span>Logging &amp; Debugging, Connecting Python with SQL Server</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 15</span>NumPy Library: Multi-dimensional Array Operations &amp; Computations</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 16</span>Pandas Library: DataFrames, Series, Data Cleaning &amp; Manipulations</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 17</span>Data Analysis &amp; Visualization using Pandas, Matplotlib, Seaborn &amp; Plotly</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 18</span>Real-world Python Project Discussion &amp; Portfolio Project Building</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 19</span>Introduction to Big Data, Apache Spark Overview, PySpark Architecture &amp; PySpark Queries</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 20</span>Git &amp; GitHub Version Control, Essential Git Commands &amp; Building REST APIs in Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleSyllabus(headerEl) {
+  const card = headerEl.parentElement;
+  card.classList.toggle('active');
+}
+
+function toggleAllSyllabus() {
+  const cards = document.querySelectorAll('.syllabus-card');
+  const btnTxt = document.getElementById('toggleAllTxt');
+  const isAnyInactive = Array.from(cards).some(card => !card.classList.contains('active'));
+  
+  cards.forEach(card => {
+    if (isAnyInactive) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  if (isAnyInactive) {
+    btnTxt.textContent = 'Collapse Module';
+  } else {
+    btnTxt.textContent = 'Expand Module';
+  }
+}
+</script>
 
 <!-- Career Outcomes -->
 <section class="section">

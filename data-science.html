@@ -93,9 +93,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .mstat-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1}
   .mstat-lbl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
 
+  /* Course Syllabus (AWDiz Accordion Layout) */
+  .syllabus-section{background:var(--bg-soft);padding:60px 0}
+  .syllabus-top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:16px}
+  .syllabus-toggle-btn{background:#fff;border:1.5px solid #107c41;color:#107c41;font-size:13px;font-weight:700;padding:8px 18px;border-radius:50px;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px}
+  .syllabus-toggle-btn:hover{background:#107c41;color:#fff}
+  .syllabus-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;margin:0 auto}
+  .syllabus-card{background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden;transition:all .25s ease;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+  .syllabus-card:hover{border-color:#107c41;transform:translateY(-2px)}
+  .syllabus-card.active{border-color:#107c41;box-shadow:0 6px 20px rgba(16,124,65,.15)}
+  .syllabus-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fff;cursor:pointer;user-select:none;transition:background .25s,color .25s}
+  .syllabus-card.active .syllabus-header{background:linear-gradient(135deg,#0a5d2f 0%,#107c41 100%);color:#fff}
+  .syllabus-title-wrap{display:flex;align-items:center;gap:14px}
+  .syllabus-dot-box{width:28px;height:28px;border-radius:50%;background:#e6f4ea;border:2px solid #107c41;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+  .syllabus-dot-inner{width:10px;height:10px;border-radius:50%;background:#107c41;transition:background .25s}
+  .syllabus-card.active .syllabus-dot-box{background:#fff;border-color:#fff}
+  .syllabus-card.active .syllabus-dot-inner{background:#107c41}
+  .syllabus-title{font-size:16px;font-weight:700;color:var(--navy);line-height:1.35}
+  .syllabus-card.active .syllabus-title{color:#fff}
+  .syllabus-arrow{width:28px;height:28px;border-radius:50%;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--navy);transition:transform .3s ease,background .2s,color .2s;flex-shrink:0}
+  .syllabus-card.active .syllabus-arrow{background:rgba(255,255,255,.2);color:#fff;transform:rotate(180deg)}
+  .syllabus-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(0,1,0,1),padding .3s ease;padding:0 22px;background:#fafbfc}
+  .syllabus-card.active .syllabus-body{max-height:2000px;transition:max-height .5s ease-in-out,padding .3s ease;padding:22px;border-top:1px solid rgba(0,0,0,.06)}
+  .syllabus-topics{list-style:none;display:grid;gap:11px;padding:0;margin:0}
+  .syllabus-topic{font-size:13.5px;color:var(--ink);line-height:1.55;display:flex;align-items:flex-start;gap:10px}
+  .syllabus-topic::before{content:"✓";color:#107c41;font-weight:800;font-size:13px;flex-shrink:0;margin-top:2px}
+  .syllabus-badge{display:inline-block;background:#e6f4ea;color:#107c41;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:6px;white-space:nowrap}
+
   @media(max-width:980px){
     .outcomes-grid{grid-template-columns:repeat(2,1fr)}
-    .fee-wrap,.market-inner,.lo-grid{grid-template-columns:1fr}
+    .fee-wrap,.market-inner,.lo-grid,.syllabus-grid{grid-template-columns:1fr}
     .project-grid{grid-template-columns:1fr 1fr}
     .fee-card{position:static}
   }
@@ -239,6 +266,219 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- Course Syllabus Section (AWDiz Style Accordion Layout) -->
+<section class="section syllabus-section" id="syllabus">
+  <div class="container">
+    <div class="syllabus-top-bar">
+      <div class="section-head" style="margin-bottom:0;text-align:left">
+        <span class="eyebrow">Detailed Curriculum</span>
+        <h2>Data Science Course Syllabus</h2>
+        <p>Comprehensive 8-Month Training — Day-by-Day &amp; Module-by-Module Breakdown</p>
+      </div>
+      <button class="syllabus-toggle-btn" id="toggleAllBtn" onclick="toggleAllSyllabus()">
+        <span>▼</span> <span id="toggleAllTxt">Expand All Modules</span>
+      </button>
+    </div>
+
+    <div class="syllabus-grid">
+      <!-- Module 1.0 -->
+      <div class="syllabus-card active">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">1.0 Advance Excel for Data Analysis</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 1</span>Introduction to Excel, Ribbons, Workbooks, Sheets, Rows, Columns, Cell Addresses &amp; Data Formatting</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 2</span>Using 'Go To', Range Copy/PasteSpecial, Sorting, Filtering, Data Validations, Remove Duplicates &amp; Text to Columns</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 3</span>Subtotals, Grouping, Data Protection (Cells, Sheet, Workbook), Conditional Formatting &amp; What-If Analysis</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 4</span>Excel Operations, Formulas &amp; Functions (Sum, Count, Average, Text, Date/Time), Error Checking &amp; Formula Evaluation</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 5</span>Excel Charts, Chart Modifications &amp; Advanced Charting Techniques</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 6</span>If &amp; Nested If Functions with AND/OR, Logical, Text, Date &amp; Time Functions</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 7</span>Lookup &amp; Reference Functions: VLOOKUP, XLOOKUP, MATCH, INDEX, ADDRESS, INDIRECT &amp; combinations</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 8</span>Mathematical Functions &amp; Database Functions</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 9</span>Understanding Pivot Tables, Pivot Charts, Formatting, Custom Formulas in Pivot Tables &amp; Slicers</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 10</span>Power Pivot Fundamentals: Data Relationships, Visualizing Power Pivot Data, DAX Calculations, KPIs &amp; Time Intelligence</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Projects</span>Building Live Executive Dashboards &amp; MIS Performance Reports</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 2.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">2.0 Python + Statistics + PySpark</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 1-3</span>Python Introduction, Installation (Anaconda/Colab), Objects, Data Types, Operators, Formatting &amp; Indexing</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 4-6</span>Lists, Tuples, Dictionaries, Sets, Control Flow (If-Else), Loops, List/Tuple Comprehension &amp; Methods</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 7-9</span>Dictionary &amp; String Methods, Regular Expressions (Regex), Functions, Lambda, Map, Filter, Reduce, Modules &amp; Generators</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 10-11</span>Statistics for Data Science: Population vs Sample, Sampling, Central Tendency, Dispersion, Z-Score, Probability &amp; Math Libraries</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 12-14</span>Object-Oriented Programming (OOPs), Inheritance, Polymorphism, File Handling, Exception Handling, Logging &amp; SQL Connection</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 15-17</span>Data Analytics Libraries: NumPy Arrays, Pandas DataFrames, Data Cleaning &amp; Visualization (Matplotlib, Seaborn, Plotly)</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Day 18-20</span>End-to-End Python Project, Big Data &amp; Apache Spark, PySpark Queries, Git/GitHub Version Control &amp; APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 3.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">3.0 Power BI for Business Intelligence</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 1-3</span>Introduction to Power BI Desktop, Cloud Architecture, Data Source Library, Report Designer &amp; Direct Query</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 4-5</span>Chart &amp; Map Reports, Stacked/Clustered Charts, Waterfall, Scatter, Pie Charts, Hierarchies &amp; Drilldown Reports</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 6-7</span>Power Query &amp; M Language: Data Transformations, Merging, Joining, Union, Custom Columns &amp; Applied Steps</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 8-9</span>DAX Expressions: Row/Filter Context, Calculated Columns, Measures, YTD/QTD/MTD Calculations &amp; Time Intelligence</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 10-11</span>Power BI Cloud &amp; Deployment: Workspaces, Dashboards, Real-Time Pins, Personal/Enterprise Gateways &amp; Schedules</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 12-13</span>Improving Reports: Templates (.pbit), Gateway Settings, Natural Language Q&amp;A &amp; Live Data Refresh</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 4.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">4.0 Machine Learning Algorithms</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 1-2</span>Introduction to Machine Learning (Supervised, Unsupervised, Reinforcement) &amp; Data Preprocessing (Missing Data, Train/Test Split)</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 3-6</span>Regression Algorithms: Simple &amp; Multiple Linear Regression, Polynomial Regression, SVR, R-Squared &amp; Adjusted R-Squared</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 7-10</span>Classification Algorithms: K-Nearest Neighbors (K-NN), Naive Bayes, Decision Trees, Random Forest &amp; Logistic Regression</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 11-14</span>Model Evaluation &amp; Tuning: Confusion Matrix, K-Fold Cross Validation, GridSearchCV, Outliers &amp; SMOTE for Imbalanced Data</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 15-17</span>Unsupervised Learning: K-Means Clustering, Hierarchical Clustering (Dendrograms), Association Rules (Apriori/Eclat) &amp; Q-Learning</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Module 18-20</span>NLP Fundamentals (Tokenization, TF-IDF), Python Flask Web Model Deployment &amp; Interview Questions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 5.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">5.0 Deep Learning &amp; Neural Networks</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic">Artificial Neural Networks (ANN): Perceptron, Multilayer Perceptron, Input/Hidden/Output Layers</li>
+            <li class="syllabus-topic">Activation Functions: Sigmoid, Tanh, ReLU, Leaky ReLU, Softmax &amp; Loss Functions</li>
+            <li class="syllabus-topic">Training Neural Nets: Forward Propagation, Backpropagation, Gradient Descent, Adam &amp; RMSprop Optimizers</li>
+            <li class="syllabus-topic">Convolutional Neural Networks (CNN): Image Kernels, Pooling, Dropout, Transfer Learning (ResNet, VGG)</li>
+            <li class="syllabus-topic">Recurrent Neural Networks (RNN) &amp; LSTM: Sequential Data Processing &amp; Time-Series Forecasting</li>
+            <li class="syllabus-topic">Hands-on Deep Learning Frameworks: Building &amp; Training Models in TensorFlow &amp; Keras</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 6.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">6.0 Natural Language Processing (NLP) &amp; GenAI</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic">Text Preprocessing: Tokenization, Stemming, Lemmatization, Stop Words Removal &amp; Normalization</li>
+            <li class="syllabus-topic">Feature Extraction: Bag of Words (BoW), Term Frequency-Inverse Document Frequency (TF-IDF), Word Embeddings</li>
+            <li class="syllabus-topic">NLP Applications: Spam Classifier, Sentiment Analysis, Intent Classification &amp; Named Entity Recognition (NER)</li>
+            <li class="syllabus-topic">Generative AI &amp; LLM Basics: Large Language Models, Transformer Architecture, Prompt Engineering &amp; OpenAI API Integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 7.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">7.0 MySQL &amp; SQL Server for Data Management</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic">Relational Database Fundamentals: RDBMS Architecture, Data Modeling &amp; Normalization</li>
+            <li class="syllabus-topic">SQL Queries: SELECT, WHERE, GROUP BY, HAVING, ORDER BY &amp; Aggregations</li>
+            <li class="syllabus-topic">SQL Joins: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN &amp; Self Joins</li>
+            <li class="syllabus-topic">Advanced SQL: Subqueries, CTEs (Common Table Expressions) &amp; Window Functions (ROW_NUMBER, RANK, DENSE_RANK)</li>
+            <li class="syllabus-topic">Database Optimization: Stored Procedures, Views, Triggers, Indexing &amp; Query Tuning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 8.0 -->
+      <div class="syllabus-card">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">8.0 Data Science Capstone Projects</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><b>Project 1:</b> E-Commerce Customer Churn Prediction (Supervised ML + Flask REST API Deployment)</li>
+            <li class="syllabus-topic"><b>Project 2:</b> Executive Business Intelligence &amp; Sales Dashboard (SQL Server + Power BI + DAX)</li>
+            <li class="syllabus-topic"><b>Project 3:</b> Medical Image Classification &amp; Clinical Text NLP (Deep Learning + TensorFlow + Streamlit)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleSyllabus(headerEl) {
+  const card = headerEl.parentElement;
+  card.classList.toggle('active');
+}
+
+function toggleAllSyllabus() {
+  const cards = document.querySelectorAll('.syllabus-card');
+  const btnTxt = document.getElementById('toggleAllTxt');
+  const isAnyInactive = Array.from(cards).some(card => !card.classList.contains('active'));
+  
+  cards.forEach(card => {
+    if (isAnyInactive) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  if (isAnyInactive) {
+    btnTxt.textContent = 'Collapse All Modules';
+  } else {
+    btnTxt.textContent = 'Expand All Modules';
+  }
+}
+</script>
 
 <!-- Fee + Batch -->
 <section class="section" style="background:var(--bg-soft);padding-top:0">

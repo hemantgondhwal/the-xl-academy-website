@@ -262,6 +262,11 @@ footer a:hover{color:var(--orange)}
 .qbadge b{color:#fff}
 .course-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 
+/* Course Hero Banner Image */
+.course-hero-img-wrap{display:flex;align-items:center;justify-content:center}
+.course-hero-img{width:100%;max-width:480px;height:auto;display:block;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1.5px solid rgba(255,255,255,.2);transition:transform .3s ease}
+.course-hero-img:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(0,0,0,.55)}
+
 /* Hero info card */
 .hero-info-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);border-radius:20px;padding:28px}
 .hero-info-card h3{color:#fff;font-size:17px;margin-bottom:18px;font-weight:600}

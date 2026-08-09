@@ -18,9 +18,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20260730a">
 <style>
-  /* Course accent: Blue gradient */
-  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(22,100,213,.3),transparent),linear-gradient(135deg,#0d2b6b 0%,#1a4fa0 50%,#2563c8 100%)}
-  .mod-num{background:linear-gradient(135deg,#1a4fa0,#2563c8)}
+  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(22,194,213,.2),transparent),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1a3276 100%)}
+  .mod-num{background:linear-gradient(135deg,var(--orange-d),var(--orange))}
 
   /* Why join + ratings */
   .platform-ratings{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;justify-content:center}
@@ -129,6 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/#courses">Our Courses</a><span class="sep">›</span>
         <span>SQL Server</span>
       </nav>
+      <div class="rating" style="color:var(--gold);font-size:15px">★★★★★ <span style="color:rgba(255,255,255,.6);font-weight:400">4.8 / 5 &nbsp;·&nbsp; 1,100+ reviews</span></div>
       <h1>SQL &amp; SQL Server Training</h1>
       <p class="course-hero-sub">Every data analyst, business analyst, and data scientist is expected to write SQL. Go from SELECT basics to complex joins, stored procedures, and window functions used in real analytics workflows.</p>
       <div class="qbadges">

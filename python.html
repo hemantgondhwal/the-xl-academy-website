@@ -18,8 +18,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20260730a">
 <style>
-  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(27,43,107,.3),transparent),linear-gradient(135deg,#0d1f80 0%,#1B2B6B 50%,#253C8F 100%)}
-  .mod-num{background:linear-gradient(135deg,#1B2B6B,#253C8F)}
+  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(22,194,213,.2),transparent),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1a3276 100%)}
+  .mod-num{background:linear-gradient(135deg,var(--orange-d),var(--orange))}
+
+  /* Why join + ratings */
+  .platform-ratings{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;justify-content:center}
+  .p-rating{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 22px}
+  .p-rating-platform{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.3px}
+  .p-rating-score{font-size:22px;font-weight:800;color:var(--navy);line-height:1}
+  .p-rating-stars{color:var(--gold);font-size:11px;margin-top:1px}
+
+  /* Outcomes (career) */
+  .outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .outcome-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;transition:.25s}
+  .outcome-card:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+  .outcome-role{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
+  .salary-pill{display:inline-block;background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 13px;font-size:13px;font-weight:600;margin-bottom:10px}
+  .outcome-cos{font-size:12px;color:var(--muted);line-height:1.6}
+
+  /* Fee card */
+  .fee-wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:32px;align-items:start;max-width:920px;margin:0 auto}
+  .fee-card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);position:sticky;top:90px}
+  .fee-amount{font-size:42px;font-weight:800;color:var(--navy);line-height:1}
+  .fee-amount span{font-size:18px;font-weight:500;color:var(--muted)}
+  .fee-note{font-size:12px;color:var(--muted);margin-top:5px;margin-bottom:18px}
+  .fee-divider{height:1px;background:var(--line);margin:16px 0}
+  .fee-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+  .fee-row .lbl{color:var(--muted)}.fee-row .val{font-weight:600;color:var(--navy)}
+  .fee-actions{display:grid;gap:10px}
+  .batch-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px}
+  .batch-card h3{font-size:17px;margin-bottom:16px}
+  .batch-row{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;background:var(--bg-soft);border-radius:10px;font-size:13.5px;margin-bottom:10px}
+  .batch-row:last-child{margin-bottom:0}
+  .batch-row .info b{color:var(--navy)}
+  .batch-row .info small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .badge-open{background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .badge-few{background:#fff3e4;color:#c85a12;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .centres-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .centres-card h3{font-size:17px;margin-bottom:14px}
+  .centre-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .centre-tag{background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--navy)}
+  .centre-tag-online{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;border:0}
+
+  /* Market strip */
+  .market-strip{background:var(--navy);padding:64px 0;color:#fff}
+  .market-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .market-inner h2{color:#fff;font-size:clamp(22px,2.8vw,34px);margin:10px 0 14px}
+  .market-inner p{color:rgba(255,255,255,.6);font-size:15px;line-height:1.7}
+  .market-salary{font-size:40px;font-weight:800;color:var(--gold);margin-top:20px;line-height:1}
+  .market-salary-lbl{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px}
+  .mstat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .mstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px}
+  .mstat-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1}
+  .mstat-lbl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
 
   /* Course Syllabus (AWDiz Accordion Layout — Navy Blue & Vibrant Orange Theme) */
   .syllabus-section{background:var(--bg-soft);padding:60px 0}
@@ -47,6 +98,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .syllabus-topic{font-size:13.5px;color:var(--ink);line-height:1.55;display:flex;align-items:flex-start;gap:10px}
   .syllabus-topic::before{content:"✓";color:var(--orange-d);font-weight:800;font-size:13px;flex-shrink:0;margin-top:2px}
   .syllabus-badge{display:inline-block;background:#fff3eb;color:var(--orange-d);border:1px solid rgba(255,107,0,.2);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:6px;white-space:nowrap}
+
+  @media(max-width:980px){
+    .outcomes-grid{grid-template-columns:repeat(2,1fr)}
+    .fee-wrap,.market-inner,.syllabus-grid{grid-template-columns:1fr}
+    .fee-card{position:static}
+  }
+  @media(max-width:600px){
+    .outcomes-grid{grid-template-columns:1fr}
+  }
 </style>
 <link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
 </head>
@@ -68,6 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/#courses">Our Courses</a><span class="sep">›</span>
         <span>Python for Data Analytics</span>
       </nav>
+      <div class="rating" style="color:var(--gold);font-size:15px">★★★★★ <span style="color:rgba(255,255,255,.6);font-weight:400">4.8 / 5 &nbsp;·&nbsp; 1,200+ reviews</span></div>
       <h1>Python for Data Analytics</h1>
       <p class="course-hero-sub">The most in-demand programming language for data work. Go from zero to writing production-ready Python scripts — covering Pandas, NumPy, data visualisation, and exploratory analysis.</p>
       <div class="qbadges">
@@ -116,6 +177,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
+
+<!-- Why Join + Ratings -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why The XL Academy</span>
+      <h2>What Makes This Program Different</h2>
+      <p>3,000+ learners have chosen The XL Academy over self-paced online platforms. Here's why.</p>
+    </div>
+    <div class="why-grid">
+      <div class="feature">
+        <div class="ic">🎯</div>
+        <h3>Industry-Aligned Curriculum</h3>
+        <p>Regularly updated with the latest tools, technologies, market demands and industry hiring requirements.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">🛠️</div>
+        <h3>Hands-On Learning from Day One</h3>
+        <p>Learn by doing with live projects, real datasets, and practical assignments &amp; become Master in industry tools through practical training.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">👨‍🏫</div>
+        <h3>Industry Expert Trainers</h3>
+        <p>Get trained by experienced professionals with 10+ years of industry expertise, who bring real-world insights, practical knowledge, and interview-focused guidance to every session.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">💼</div>
+        <h3>100% Placement Support</h3>
+        <p>Get job-ready with Resume Building, LinkedIn Optimization, Mock Interviews, Career Mentoring &amp; Placement Assistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Tools & Technologies -->
@@ -374,6 +468,26 @@ function toggleAllSyllabus() {
   </div>
 </section>
 
+<!-- Market Stats -->
+<section class="market-strip">
+  <div class="container">
+    <div class="market-inner">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Market Opportunity</span>
+        <h2>Python Analytics Is High-Demand Across India</h2>
+        <p>Python has become the #1 programming language for analytics, data engineering, and AI. Master Python to unlock high-growth career opportunities.</p>
+        <div class="market-salary">₹5 – ₹12 LPA</div>
+        <div class="market-salary-lbl">Typical salary range for Python Analyst roles in India</div>
+      </div>
+      <div class="mstat-grid">
+        <div class="mstat"><div class="mstat-num">#1</div><div class="mstat-lbl">Most requested programming language for Data Analytics globally</div></div>
+        <div class="mstat"><div class="mstat-num">45K+</div><div class="mstat-lbl">Active Python Analytics job openings in India</div></div>
+        <div class="mstat"><div class="mstat-num">3.5x</div><div class="mstat-lbl">Faster career growth rate for Python-skilled analysts</div></div>
+        <div class="mstat"><div class="mstat-num">96%</div><div class="mstat-lbl">Our learners placed within 60 days of course completion</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
 <section class="section">

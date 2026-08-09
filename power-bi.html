@@ -21,6 +21,93 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Course accent: Power BI gold/amber gradient */
   .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(245,194,0,.25),transparent),linear-gradient(135deg,#6b4400 0%,#c98500 50%,#F5C200 100%)}
   .mod-num{background:linear-gradient(135deg,#c98500,#F5C200)}
+
+  /* Why join + ratings */
+  .platform-ratings{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;justify-content:center}
+  .p-rating{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 22px}
+  .p-rating-platform{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.3px}
+  .p-rating-score{font-size:22px;font-weight:800;color:var(--navy);line-height:1}
+  .p-rating-stars{color:var(--gold);font-size:11px;margin-top:1px}
+
+  /* Outcomes (career) */
+  .outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .outcome-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;transition:.25s}
+  .outcome-card:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+  .outcome-role{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
+  .salary-pill{display:inline-block;background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 13px;font-size:13px;font-weight:600;margin-bottom:10px}
+  .outcome-cos{font-size:12px;color:var(--muted);line-height:1.6}
+
+  /* Fee card */
+  .fee-wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:32px;align-items:start;max-width:920px;margin:0 auto}
+  .fee-card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);position:sticky;top:90px}
+  .fee-amount{font-size:42px;font-weight:800;color:var(--navy);line-height:1}
+  .fee-amount span{font-size:18px;font-weight:500;color:var(--muted)}
+  .fee-note{font-size:12px;color:var(--muted);margin-top:5px;margin-bottom:18px}
+  .fee-divider{height:1px;background:var(--line);margin:16px 0}
+  .fee-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+  .fee-row .lbl{color:var(--muted)}.fee-row .val{font-weight:600;color:var(--navy)}
+  .fee-actions{display:grid;gap:10px}
+  .batch-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px}
+  .batch-card h3{font-size:17px;margin-bottom:16px}
+  .batch-row{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;background:var(--bg-soft);border-radius:10px;font-size:13.5px;margin-bottom:10px}
+  .batch-row:last-child{margin-bottom:0}
+  .batch-row .info b{color:var(--navy)}
+  .batch-row .info small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .badge-open{background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .badge-few{background:#fff3e4;color:#c85a12;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .centres-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .centres-card h3{font-size:17px;margin-bottom:14px}
+  .centre-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .centre-tag{background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--navy)}
+  .centre-tag-online{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;border:0}
+
+  /* Market strip */
+  .market-strip{background:var(--navy);padding:64px 0;color:#fff}
+  .market-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .market-inner h2{color:#fff;font-size:clamp(22px,2.8vw,34px);margin:10px 0 14px}
+  .market-inner p{color:rgba(255,255,255,.6);font-size:15px;line-height:1.7}
+  .market-salary{font-size:40px;font-weight:800;color:var(--gold);margin-top:20px;line-height:1}
+  .market-salary-lbl{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px}
+  .mstat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .mstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px}
+  .mstat-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1}
+  .mstat-lbl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
+
+  /* Course Syllabus */
+  .syllabus-section{background:var(--bg-soft);padding:60px 0}
+  .syllabus-top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:16px}
+  .syllabus-toggle-btn{background:#fff;border:1.5px solid var(--orange);color:var(--orange-d);font-size:13px;font-weight:700;padding:8px 20px;border-radius:50px;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(255,107,0,.12)}
+  .syllabus-toggle-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange-d);transform:translateY(-1px)}
+  .syllabus-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:900px;margin:0 auto}
+  .syllabus-card{background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden;transition:all .25s ease;box-shadow:0 2px 8px rgba(8,16,72,.04)}
+  .syllabus-card:hover{border-color:var(--orange);transform:translateY(-2px)}
+  .syllabus-card.active{border-color:var(--navy);box-shadow:0 6px 22px rgba(8,16,72,.16)}
+  .syllabus-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#fff;cursor:pointer;user-select:none;transition:background .25s,color .25s}
+  .syllabus-card.active .syllabus-header{background:linear-gradient(135deg,var(--navy) 0%,#1a3276 100%);color:#fff}
+  .syllabus-title-wrap{display:flex;align-items:center;gap:14px}
+  .syllabus-dot-box{width:28px;height:28px;border-radius:50%;background:#fff3eb;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+  .syllabus-dot-inner{width:10px;height:10px;border-radius:50%;background:var(--orange);transition:background .25s}
+  .syllabus-card.active .syllabus-dot-box{background:var(--orange);border-color:var(--gold)}
+  .syllabus-card.active .syllabus-dot-inner{background:#fff}
+  .syllabus-title{font-size:16px;font-weight:700;color:var(--navy);line-height:1.35}
+  .syllabus-card.active .syllabus-title{color:#fff}
+  .syllabus-arrow{width:28px;height:28px;border-radius:50%;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--navy);transition:transform .3s ease,background .2s,color .2s;flex-shrink:0}
+  .syllabus-card.active .syllabus-arrow{background:var(--orange);color:#fff;transform:rotate(180deg)}
+  .syllabus-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(0,1,0,1),padding .3s ease;padding:0 22px;background:#fafbfc}
+  .syllabus-card.active .syllabus-body{max-height:2400px;transition:max-height .5s ease-in-out,padding .3s ease;padding:22px;border-top:1px solid rgba(8,16,72,.08)}
+  .syllabus-topics{list-style:none;display:grid;gap:11px;padding:0;margin:0}
+  .syllabus-topic{font-size:13.5px;color:var(--ink);line-height:1.55;display:flex;align-items:flex-start;gap:10px}
+  .syllabus-topic::before{content:"✓";color:var(--orange-d);font-weight:800;font-size:13px;flex-shrink:0;margin-top:2px}
+  .syllabus-badge{display:inline-block;background:#fff3eb;color:var(--orange-d);border:1px solid rgba(255,107,0,.2);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:6px;white-space:nowrap}
+
+  @media(max-width:980px){
+    .outcomes-grid{grid-template-columns:repeat(2,1fr)}
+    .fee-wrap,.market-inner,.syllabus-grid{grid-template-columns:1fr}
+    .fee-card{position:static}
+  }
+  @media(max-width:600px){
+    .outcomes-grid{grid-template-columns:1fr}
+  }
 </style>
 <link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
 </head>
@@ -141,6 +228,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Course Syllabus Section (AWDiz Style Accordion Layout — Navy & Orange Theme) -->
+<section class="section syllabus-section" id="syllabus">
+  <div class="container">
+    <div class="syllabus-top-bar">
+      <div class="section-head" style="margin-bottom:0;text-align:left">
+        <span class="eyebrow">Detailed Curriculum</span>
+        <h2>Power BI Course Syllabus</h2>
+        <p>Comprehensive 13 Classes Training Breakdown — Power Query, DAX &amp; Dashboards</p>
+      </div>
+      <button class="syllabus-toggle-btn" id="toggleAllBtn" onclick="toggleAllSyllabus()">
+        <span>▼</span> <span id="toggleAllTxt">Collapse Module</span>
+      </button>
+    </div>
+
+    <div class="syllabus-grid">
+      <!-- Module Power BI -->
+      <div class="syllabus-card active">
+        <div class="syllabus-header" onclick="toggleSyllabus(this)">
+          <div class="syllabus-title-wrap">
+            <div class="syllabus-dot-box"><div class="syllabus-dot-inner"></div></div>
+            <div class="syllabus-title">Power BI (13 Classes)</div>
+          </div>
+          <div class="syllabus-arrow">▼</div>
+        </div>
+        <div class="syllabus-body">
+          <ul class="syllabus-topics">
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 1</span>Introduction to Business Intelligence &amp; Power BI Desktop Installation</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 2</span>Power Query Editor: Data Extraction, Cleaning, Unpivoting &amp; Transformations</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 3</span>Data Modeling &amp; Relationships: Star Schema, Snowflake Schema, Active vs Inactive Relationships</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 4</span>DAX Fundamentals: Calculated Columns vs Calculated Measures, Syntax &amp; Context</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 5</span>Advanced DAX Functions: CALCULATE, ALL, ALLEXCEPT, FILTER, RELATED</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 6</span>Time Intelligence DAX Functions: YTD, QTD, MTD, SAMEPERIODLASTYEAR, DATEADD</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 7</span>Building Visualizations: Bar/Column Charts, Line/Area Charts, Pie/Donut, Cards, Tables &amp; Matrix</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 8</span>Advanced Visuals: Maps, Waterfall Charts, Gauge Charts, Funnel Charts &amp; Custom Visuals</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 9</span>Interactivity &amp; Formatting: Slicers, Cross-Filtering, Drill-Down, Drill-Through &amp; Tooltips</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 10</span>Power BI Service: Workspaces, Publishing Reports, Dashboards &amp; Scheduled Refresh</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 11</span>Security &amp; Governance: Row Level Security (RLS) &amp; Gateway Configuration</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 12</span>End-to-End Real Estate / Financial Analytics Dashboard Project</li>
+            <li class="syllabus-topic"><span class="syllabus-badge">Class 13</span>Portfolio Project Review, Resume Optimization &amp; Power BI Interview Prep</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleSyllabus(headerEl) {
+  const card = headerEl.parentElement;
+  card.classList.toggle('active');
+}
+
+function toggleAllSyllabus() {
+  const cards = document.querySelectorAll('.syllabus-card');
+  const btnTxt = document.getElementById('toggleAllTxt');
+  const isAnyInactive = Array.from(cards).some(card => !card.classList.contains('active'));
+  
+  cards.forEach(card => {
+    if (isAnyInactive) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  if (isAnyInactive) {
+    btnTxt.textContent = 'Collapse Module';
+  } else {
+    btnTxt.textContent = 'Expand Module';
+  }
+}
+</script>
+
 <!-- Career Outcomes -->
 <section class="section">
   <div class="container">
@@ -177,15 +337,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Placement Companies -->
 <div class="companies-strip">
   <div class="container">
-    <div class="co-label">Our students placed at</div>
+    <div class="co-label">Our students works at</div>
     <div class="co-logos">
-      <div class="co-logo">TCS</div><div class="co-logo">Wipro</div><div class="co-logo">HCL</div>
-      <div class="co-logo">Infosys</div><div class="co-logo">ICICI Bank</div><div class="co-logo">HDFC Bank</div>
-      <div class="co-logo">Genpact</div><div class="co-logo">Capgemini</div><div class="co-logo">Flipkart</div>
-      <div class="co-logo">Amazon</div><div class="co-logo">Mphasis</div><div class="co-logo">Hexaware</div>
+      <div class="co-logo" title="Accenture">
+        <svg height="24" viewBox="0 0 115 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6, 0)"><text x="0" y="24" font-family="'Poppins', sans-serif" font-weight="700" font-size="21" fill="#000000" letter-spacing="-0.5px">accenture</text><path d="M96 3L107 10.5L96 18L101 10.5L96 3Z" fill="#A100FF"/></g></svg>
+      </div>
+      <div class="co-logo" title="American Express">
+        <svg height="26" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="32" rx="4" fill="#006FCF"/><text x="60" y="14" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="10" fill="#FFFFFF" letter-spacing="1px">AMERICAN</text><text x="60" y="26" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="10" fill="#FFFFFF" letter-spacing="1px">EXPRESS</text></svg>
+      </div>
+      <div class="co-logo" title="Amazon">
+        <svg height="24" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(5, 0)"><text x="40" y="21" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="20" fill="#111111" letter-spacing="-0.5px">amazon</text><path d="M12 24 C32 32 62 31 72 23 M67 21 L73 23 L69 26" stroke="#FF9900" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+      </div>
+      <div class="co-logo" title="Bank of America">
+        <svg height="22" viewBox="0 0 150 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2, 2)"><path d="M0 8 L10 2 L20 8 L14 20 L4 20 Z" fill="#E31837"/><path d="M6 12 L16 6 L12 16 Z" fill="#002D62"/><text x="85" y="19" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="12" fill="#002D62" letter-spacing="0.5px">BANK OF AMERICA</text></g></svg>
+      </div>
+      <div class="co-logo" title="TCS">
+        <svg height="24" viewBox="0 0 60 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="30" y="23" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="22" fill="#00529B" letter-spacing="-0.5px">TCS</text></svg>
+      </div>
+      <div class="co-logo" title="Wipro">
+        <svg height="24" viewBox="0 0 85 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(5, 0)"><circle cx="6" cy="10" r="4.5" fill="#E41B23"/><circle cx="16" cy="10" r="4.5" fill="#009640"/><circle cx="11" cy="18" r="4.5" fill="#0072CE"/><text x="50" y="23" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#222222">wipro</text></g></svg>
+      </div>
+      <div class="co-logo" title="Infosys">
+        <svg height="24" viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="40" y="23" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" fill="#007CC3" letter-spacing="-0.5px">Infosys</text></svg>
+      </div>
+      <div class="co-logo" title="Flipkart">
+        <svg height="24" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(3, 0)"><rect x="0" y="4" width="24" height="24" rx="5" fill="#2874F0"/><text x="7" y="22" font-family="'Poppins', sans-serif" font-weight="800" font-size="17" fill="#FFE11B">f</text><text x="60" y="22" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="18" fill="#2874F0">Flipkart</text></g></svg>
+      </div>
+      <div class="co-logo" title="Cognizant">
+        <svg height="24" viewBox="0 0 105 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="52" y="22" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="19" fill="#0033A0">Cognizant</text></svg>
+      </div>
+      <div class="co-logo" title="Deloitte">
+        <svg height="24" viewBox="0 0 90 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="45" y="22" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" fill="#111111">Deloitte<tspan fill="#86BC25">.</tspan></text></svg>
+      </div>
+      <div class="co-logo" title="Genpact">
+        <svg height="24" viewBox="0 0 85 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="42" y="22" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#008080">genpact</text></svg>
+      </div>
+      <div class="co-logo" title="Fractal Analytics">
+        <svg height="24" viewBox="0 0 70 32" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="35" y="22" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#4B286D">fractal</text></svg>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Fee + Batch -->
+<section class="section" style="background:var(--bg-soft);padding-top:60px">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Enroll Today</span>
+      <h2>Fee, Batches &amp; Centres</h2>
+      <p>Transparent pricing. Seats are limited per batch — reserve yours early.</p>
+    </div>
+    <div class="fee-wrap">
+      <div class="fee-card">
+        <div class="fee-amount">₹8,500 <span>+ Tax</span></div>
+        <div class="fee-note">* All study materials, projects &amp; certificate included</div>
+        <div class="fee-divider"></div>
+        <div class="fee-row"><span class="lbl">Duration</span><span class="val">6 Weeks</span></div>
+        <div class="fee-row"><span class="lbl">Mode</span><span class="val">Online &amp; Offline</span></div>
+        <div class="fee-row"><span class="lbl">Batch Size</span><span class="val">Max 20 Students</span></div>
+        <div class="fee-row"><span class="lbl">Certificate</span><span class="val">The XL Academy</span></div>
+        <div class="fee-divider"></div>
+        <div class="fee-actions">
+          <button class="btn btn-primary" onclick="openModal()" style="width:100%;justify-content:center">Book Free Demo Class</button>
+          <a href="tel:+917303609096" class="btn btn-call" style="width:100%;justify-content:center">Talk to a Counsellor</a>
+        </div>
+      </div>
+      <div>
+        <div class="batch-card">
+          <h3>Upcoming Batches</h3>
+          <div class="batch-row"><div class="info"><b>Weekday Batch</b><small>Mon to Fri — 10:00 AM to 6:00 PM</small></div><span class="badge-open">Starting Soon</span></div>
+          <div class="batch-row"><div class="info"><b>Weekend Batch</b><small>Sat &amp; Sun — 10:00 AM to 6:00 PM</small></div><span class="badge-few">Few Seats Left</span></div>
+          <div class="batch-row"><div class="info"><b>Online Batch</b><small>Flexible — recorded backups included</small></div><span class="badge-open">Open</span></div>
+        </div>
+        <div class="centres-card">
+          <h3>Available Centres</h3>
+          <div class="centre-tags">
+            <a href="branch-delhi" class="centre-tag">📍 New Delhi (HQ)</a>
+            <a href="branch-gurugram" class="centre-tag">📍 Gurugram</a>
+            <a href="branch-noida" class="centre-tag">📍 Noida</a>
+            <a href="branch-bangalore" class="centre-tag">📍 Bangalore</a>
+            <a href="branch-pune" class="centre-tag">📍 Pune</a>
+            <a href="branch-mumbai" class="centre-tag">📍 Mumbai</a>
+            <a href="https://wa.me/917303609096?text=Hi%2C%20I%20am%20interested%20in%20The%20XL%20Academy%20%E2%80%94%20Online%20batch%20for%20the%20Power%20BI%20course.%20Please%20share%20the%20batch%20schedule%20and%20fee%20details." target="_blank" rel="noopener" class="centre-tag centre-tag-online">🌐 Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Market Stats -->
+<section class="market-strip">
+  <div class="container">
+    <div class="market-inner">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Market Opportunity</span>
+        <h2>Power BI Is Microsoft's Leader in Analytics</h2>
+        <p>Power BI skills are specified in over 70% of business intelligence job descriptions globally. Master DAX and dashboard storytelling for immediate career growth.</p>
+        <div class="market-salary">₹5 – ₹11 LPA</div>
+        <div class="market-salary-lbl">Typical salary range for Power BI Developers in India</div>
+      </div>
+      <div class="mstat-grid">
+        <div class="mstat"><div class="mstat-num">#1</div><div class="mstat-lbl">Gartner Leader in Analytics &amp; BI platforms</div></div>
+        <div class="mstat"><div class="mstat-num">40K+</div><div class="mstat-lbl">Active Power BI developer job openings in India</div></div>
+        <div class="mstat"><div class="mstat-num">3x</div><div class="mstat-lbl">Faster dashboard creation vs traditional Excel</div></div>
+        <div class="mstat"><div class="mstat-num">98%</div><div class="mstat-lbl">Placement success rate for Power BI course graduates</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- FAQ -->

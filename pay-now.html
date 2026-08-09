@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay Now — The XL Academy</title>
+<meta name="description" content="Secure course fee payment for The XL Academy. Pay via UPI, credit/debit card, net banking, or bank transfer. Razorpay secured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<style>
+.course-hero{background:radial-gradient(700px 400px at 80% 0%,rgba(80,200,100,.18),transparent),linear-gradient(135deg,#0b3a25 0%,#0e5e38 55%,#1a8050 100%)}
+.pay-layout{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start}
+.pay-card{background:#fff;border-radius:var(--radius);padding:36px;box-shadow:0 4px 32px rgba(0,0,0,.09)}
+.pay-card h2{font-size:20px;color:var(--navy);margin-bottom:6px}
+.pay-card .sub{font-size:13px;color:var(--muted);margin-bottom:26px}
+.pay-btn-main{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--orange);color:#fff;font-size:17px;font-weight:700;border-radius:var(--radius);padding:18px 28px;text-decoration:none;transition:.2s;width:100%;box-sizing:border-box;border:none;cursor:pointer}
+.pay-btn-main:hover{background:var(--orange-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,122,24,.3)}
+.pay-lock{font-size:13px;color:var(--muted);text-align:center;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+.pay-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.pay-method{background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:12px 8px;text-align:center;font-size:12px;font-weight:600;color:var(--navy)}
+.pay-method .ico{font-size:22px;display:block;margin-bottom:4px}
+.divider{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.8px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.bank-details{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:20px}
+.bank-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.bank-row:last-child{border-bottom:none}
+.bank-row .label{color:var(--muted);font-size:13px}
+.bank-row .val{font-weight:600;color:var(--navy)}
+.copy-btn{background:none;border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:11px;color:var(--muted);cursor:pointer;transition:.15s}
+.copy-btn:hover{border-color:var(--orange);color:var(--orange-d)}
+.trust-row{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
+.trust-badge{display:flex;align-items:center;gap:6px;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;color:var(--navy)}
+.steps-pay{display:grid;gap:18px}
+.step-pay-row{display:flex;gap:14px;align-items:flex-start}
+.step-pay-num{width:32px;height:32px;min-width:32px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:14px;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center}
+.step-pay-text h3{font-size:15px;color:#fff;margin-bottom:3px}
+.step-pay-text p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;margin:0}
+@media(max-width:900px){.pay-layout{grid-template-columns:1fr}}
+@media(max-width:480px){.pay-methods{grid-template-columns:repeat(2,1fr)}}
+</style>
+<link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="site-header"></div>
+
+<section class="course-hero" style="padding-bottom:60px">
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">Home</a><span class="sep">›</span><span>Pay Now</span></nav>
+    <div class="pay-layout">
+      <div>
+        <div class="rating" style="color:var(--gold);font-size:15px">🔒 <span style="color:rgba(255,255,255,.6);font-weight:400">100% Secure Payment</span></div>
+        <h1 style="font-size:clamp(34px,5vw,56px);line-height:1.1;color:#fff;margin:12px 0 16px">Secure<br>Course Payment</h1>
+        <p style="font-size:16px;color:rgba(255,255,255,.8);max-width:480px;line-height:1.65;margin-bottom:32px">Pay your course fee securely via Razorpay — India's most trusted payment gateway. Accept UPI, all debit/credit cards, net banking, and wallets.</p>
+        <div class="steps-pay">
+          <div class="step-pay-row"><div class="step-pay-num">1</div><div class="step-pay-text"><h3>Click "Pay Now"</h3><p>Opens Razorpay's secure payment page. Your card/UPI details never touch our servers.</p></div></div>
+          <div class="step-pay-row"><div class="step-pay-num">2</div><div class="step-pay-text"><h3>Enter Amount &amp; Choose Method</h3><p>Enter the fee amount your counsellor confirmed. Choose from UPI, card, net banking, or EMI.</p></div></div>
+          <div class="step-pay-row"><div class="step-pay-num">3</div><div class="step-pay-text"><h3>Share Receipt</h3><p>Take a screenshot of the Razorpay confirmation and WhatsApp it to +91 73036 09096. Your seat is confirmed immediately.</p></div></div>
+        </div>
+      </div>
+      <div class="pay-card">
+        <h2>Pay Course Fee</h2>
+        <div class="sub">Powered by Razorpay — secure, instant, and trusted by 10M+ businesses.</div>
+        <a href="https://rzp.io/rzp/37HjFmF" target="_blank" rel="noopener" class="pay-btn-main">🔒 Pay Now via Razorpay</a>
+        <div class="pay-lock">🛡 256-bit SSL encrypted &nbsp;·&nbsp; PCI-DSS compliant</div>
+        <div class="pay-methods">
+          <div class="pay-method"><span class="ico">📱</span>UPI / GPay</div>
+          <div class="pay-method"><span class="ico">💳</span>Debit Card</div>
+          <div class="pay-method"><span class="ico">💳</span>Credit Card</div>
+          <div class="pay-method"><span class="ico">🏦</span>Net Banking</div>
+        </div>
+        <div class="trust-row">
+          <div class="trust-badge">🔒 SSL Secured</div>
+          <div class="trust-badge">✅ Razorpay Verified</div>
+          <div class="trust-badge">📄 Instant Receipt</div>
+        </div>
+        <div style="margin-top:18px;padding:14px;background:#f0fff4;border:1px solid #b2e8c9;border-radius:10px;font-size:13px;color:#157a3c">
+          <strong>After payment:</strong> WhatsApp your payment screenshot to <a href="https://wa.me/917303609096" target="_blank" rel="noopener" style="color:#0e6e30;font-weight:700">+91 73036 09096</a> to confirm your seat and receive your login/batch details.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Payment FAQs</span><h2>Common Questions About Paying</h2></div>
+    <div class="faq-wrap">
+      <details class="faq"><summary>How do I know how much to pay?</summary><div class="ans">Your counsellor will tell you the exact course fee and any applicable discounts during or after your free demo session. Do not pay before confirming the amount with your counsellor at +91 73036 09096.</div></details>
+      <details class="faq"><summary>Is Razorpay safe to use?</summary><div class="ans">Yes. Razorpay is India's most trusted payment gateway, used by 10M+ businesses. All transactions are 256-bit SSL encrypted and PCI-DSS compliant. Your card details are handled entirely by Razorpay — never stored on our servers.</div></details>
+      <details class="faq"><summary>Can I pay in instalments?</summary><div class="ans">Yes. We offer payment in 2–3 instalments for most courses. EMI via credit card (0% or low-cost) is also available through Razorpay. Contact us at +91 73036 09096 to set up an instalment plan before making your first payment.</div></details>
+      <details class="faq"><summary>What do I do after paying?</summary><div class="ans">Take a screenshot of the Razorpay payment confirmation and WhatsApp it to +91 73036 09096. We'll confirm your seat, share batch details, and give you access to the student portal and study materials within 24 hours.</div></details>
+      <details class="faq"><summary>I paid but didn't receive confirmation. What should I do?</summary><div class="ans">WhatsApp your Razorpay payment screenshot to +91 73036 09096 immediately. Our team will manually verify and confirm within 2 hours during working hours (Mon–Sat, 9 AM–9 PM).</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Need Help With Payment?</h2>
+      <p>Call or WhatsApp us — we'll walk you through the fee, payment options, and instalment plans in under 5 minutes.</p>
+      <div class="row">
+        <a href="https://rzp.io/rzp/37HjFmF" target="_blank" rel="noopener" class="btn btn-primary">🔒 Pay Now</a>
+        <a href="https://wa.me/917303609096" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Us</a>
+        <a href="tel:+917303609096" class="btn btn-ghost">📞 +91 73036 09096</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="components.js?v=20260730a"></script>
+</body>
+</html>
+

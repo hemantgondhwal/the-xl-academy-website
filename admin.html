@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Site Admin — The XL Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<link rel="icon" type="image/png" href="images/fav.png">
+<style>
+  body{background:var(--bg-soft)}
+  .adm-top{background:var(--navy);color:#fff;padding:16px 0}
+  .adm-top .container{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .adm-top h1{font-size:18px;font-weight:700}
+  .adm-top .who{font-size:13px;color:rgba(255,255,255,.6)}
+  .adm-tabs{background:var(--navy-2);padding:0}
+  .adm-tabs .container{display:flex;gap:4px;flex-wrap:wrap}
+  .adm-tabs button{background:none;border:0;border-bottom:3px solid transparent;color:rgba(255,255,255,.62);
+    font-family:inherit;font-size:14px;font-weight:600;padding:13px 18px;cursor:pointer;transition:.18s}
+  .adm-tabs button:hover{color:#fff}
+  .adm-tabs button.on{color:#fff;border-bottom-color:var(--orange)}
+  .adm-wrap{max-width:1000px;margin:0 auto;padding:28px 22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+  .login-card{max-width:400px;margin:8vh auto}
+  label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin:12px 0 5px}
+  input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;background:#fff;box-sizing:border-box}
+  input:focus,select:focus,textarea:focus{border-color:var(--orange)}
+  textarea{min-height:180px;resize:vertical;line-height:1.6}
+  textarea.sm{min-height:70px}
+  textarea.mono{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;min-height:120px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .btn2{border:0;border-radius:9px;padding:11px 18px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
+  .btn-p{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff}
+  .btn-p:hover{filter:brightness(1.05)}
+  .btn-g{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+  .btn-d{background:#fee2e2;color:#b91c1c}
+  .btn-sm{padding:7px 12px;font-size:13px}
+  .hint{font-size:12px;color:var(--muted);font-weight:400;margin-top:4px}
+  .msg{font-size:14px;font-weight:500;margin-top:12px;min-height:18px}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+  .toolbar h2{font-size:20px;color:var(--navy)}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:12px 14px;font-size:13.5px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--bg-soft);font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+  .pill{display:inline-block;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:600}
+  .pill.pub{background:#e6f9ee;color:#157a3c}.pill.dft{background:#fff3e4;color:#c85a12}
+  .pill.no{background:#fee2e2;color:#b91c1c}.pill.ok{background:#e6f9ee;color:#157a3c}
+  .pill.mid{background:#eef2ff;color:#3f4fa8}
+  .act a{color:var(--orange-d);font-weight:600;cursor:pointer;margin-right:12px;font-size:13px}
+  .hidden{display:none}
+  fieldset{border:1px solid var(--line);border-radius:12px;padding:18px 20px 22px;margin:0 0 20px}
+  legend{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.6px;padding:0 8px}
+  .legend-sub{font-size:12.5px;color:var(--muted);margin:2px 0 6px;font-weight:400}
+  .counter{float:right;font-size:11.5px;font-weight:600;color:var(--muted)}
+  .counter.warn{color:#c85a12}.counter.bad{color:#b91c1c}
+  .faq-row{display:grid;grid-template-columns:1fr 1.4fr auto;gap:10px;align-items:start;margin-bottom:10px}
+  .faq-row input,.faq-row textarea{margin:0}
+  .banner{border-radius:11px;padding:14px 16px;font-size:13.5px;line-height:1.6;margin-bottom:20px}
+  .banner.warn{background:#fff8ec;border:1px solid #f2d7a8;color:#7a4a12}
+  .banner.info{background:#eef4ff;border:1px solid #cfdcfa;color:#2b3f78}
+  @media(max-width:760px){.row2,.row3{grid-template-columns:1fr}.hide-sm{display:none}.faq-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="adm-top">
+  <div class="container">
+    <h1>⚙️ Site Admin — The XL Academy</h1>
+    <div id="whoBox" class="hidden"><span class="who">Signed in</span> &nbsp; <button class="btn2 btn-g btn-sm" onclick="logout()">Logout</button></div>
+  </div>
+</div>
+
+<div class="adm-tabs hidden" id="tabBar">
+  <div class="container">
+    <button id="tabBlog" onclick="goBlog()">📝 Blog Posts</button>
+    <button id="tabSeo"  onclick="goSeo()">🔍 SEO / GEO / AEO</button>
+    <button id="tabGlob" onclick="goGlobal()">🌐 Global Settings</button>
+  </div>
+</div>
+
+<!-- ══════════════ LOGIN ══════════════ -->
+<div class="adm-wrap" id="loginView">
+  <div class="card login-card">
+    <h2 style="font-size:18px;color:var(--navy);margin-bottom:6px">Admin Login</h2>
+    <p style="font-size:13px;color:var(--muted)">One password manages blog posts and every page's SEO tags.</p>
+    <label>Password</label>
+    <input type="password" id="pw" placeholder="Password" onkeydown="if(event.key==='Enter')login()">
+    <div style="margin-top:16px"><button class="btn2 btn-p" onclick="login()" style="width:100%">Sign In</button></div>
+    <div class="msg" id="loginMsg" style="text-align:center"></div>
+  </div>
+</div>
+
+<!-- ══════════════ BLOG: LIST ══════════════ -->
+<div class="adm-wrap hidden" id="dashView">
+  <div class="toolbar">
+    <h2>All Posts</h2>
+    <button class="btn2 btn-p" onclick="newPost()">+ New Post</button>
+  </div>
+  <div id="listWrap"><p style="color:var(--muted)">Loading…</p></div>
+</div>
+
+<!-- ══════════════ BLOG: EDITOR ══════════════ -->
+<div class="adm-wrap hidden" id="editView">
+  <div class="toolbar">
+    <h2 id="editTitle">New Post</h2>
+    <button class="btn2 btn-g" onclick="goBlog()">← Back</button>
+  </div>
+  <div class="card">
+    <input type="hidden" id="f_id">
+    <label>Title</label>
+    <input id="f_title" placeholder="Post title" onblur="autoslug()">
+    <div class="row2">
+      <div><label>Slug <span class="hint">(URL, auto-filled)</span></label><input id="f_slug" placeholder="post-url-slug"></div>
+      <div><label>Category</label><input id="f_category" placeholder="e.g. Career Tips"></div>
+    </div>
+    <div class="row2">
+      <div><label>Author</label><input id="f_author" placeholder="The XL Academy"></div>
+      <div><label>Date <span class="hint">(YYYY-MM-DD)</span></label><input id="f_date" placeholder="2026-07-30"></div>
+    </div>
+    <label>Cover Image URL <span class="hint">(optional — also used as the social share image)</span></label>
+    <input id="f_image" placeholder="https://… or images/…">
+    <label>Excerpt <span class="hint">(shown on the blog list, and used as this post's meta description)</span></label>
+    <textarea id="f_excerpt" class="sm" placeholder="One or two lines summarising the post…"></textarea>
+    <label>Content <span class="hint">(HTML allowed — &lt;p&gt;, &lt;h2&gt;, &lt;ul&gt;&lt;li&gt;, &lt;a&gt;, &lt;img&gt;, &lt;strong&gt;…)</span></label>
+    <textarea id="f_content" placeholder="&lt;p&gt;Write your post here…&lt;/p&gt;"></textarea>
+    <label>Status</label>
+    <select id="f_status"><option value="published">Published</option><option value="draft">Draft</option></select>
+    <div class="banner info" style="margin:18px 0 0">
+      Each published post gets its own title, description, share image and
+      BlogPosting schema automatically — no SEO entry needed.
+    </div>
+    <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+      <button class="btn2 btn-p" onclick="savePost()">Save Post</button>
+      <button class="btn2 btn-g" onclick="goBlog()">Cancel</button>
+      <button class="btn2 btn-d hidden" id="delBtn" onclick="deleteCurrent()">Delete</button>
+    </div>
+    <div class="msg" id="editMsg"></div>
+  </div>
+</div>
+
+<!-- ══════════════ SEO: PAGE LIST ══════════════ -->
+<div class="adm-wrap hidden" id="seoView">
+  <div class="toolbar">
+    <h2>Pages</h2>
+    <button class="btn2 btn-g btn-sm" onclick="seoScan()">🔄 Scan pages</button>
+  </div>
+  <div class="banner info">
+    <strong>Scan pages</strong> finds every page on the server and imports the title and
+    description it already has. Pages you have already edited are never touched, so it is
+    safe to run again after adding a new page.
+  </div>
+  <div id="seoListWrap"><p style="color:var(--muted)">Loading…</p></div>
+  <div class="msg" id="seoListMsg"></div>
+</div>
+
+<!-- ══════════════ SEO: PAGE EDITOR ══════════════ -->
+<div class="adm-wrap hidden" id="seoEditView">
+  <div class="toolbar">
+    <h2 id="seoEditTitle">Page</h2>
+    <div style="display:flex;gap:10px">
+      <a class="btn2 btn-g btn-sm" id="seoViewLink" target="_blank" style="text-decoration:none">View page ↗</a>
+      <button class="btn2 btn-g btn-sm" onclick="goSeo()">← Back</button>
+    </div>
+  </div>
+  <div class="card">
+    <input type="hidden" id="s_slug">
+
+    <fieldset>
+      <legend>Search</legend>
+      <div class="legend-sub">What Google shows in results.</div>
+      <label>Page Title <span class="counter" id="c_title"></span></label>
+      <input id="s_title" oninput="count('s_title','c_title',60)" placeholder="Data Analytics Course in Delhi — The XL Academy">
+      <div class="hint">Best under 60 characters or Google truncates it.</div>
+      <label>Meta Description <span class="counter" id="c_desc"></span></label>
+      <textarea id="s_description" class="sm" oninput="count('s_description','c_desc',160)" placeholder="What this page offers, in one or two sentences…"></textarea>
+      <div class="hint">Best under 160 characters.</div>
+      <div class="row2">
+        <div><label>Robots</label>
+          <select id="s_robots">
+            <option value="index,follow">index, follow (normal)</option>
+            <option value="noindex,follow">noindex, follow (hide from Google)</option>
+            <option value="index,nofollow">index, nofollow</option>
+            <option value="noindex,nofollow">noindex, nofollow</option>
+          </select></div>
+        <div><label>Canonical URL <span class="hint">(blank = auto)</span></label>
+          <input id="s_canonical" placeholder="https://thexlacademy.com/data-analytics"></div>
+      </div>
+      <label>Keywords <span class="hint">(optional — Google ignores these, some other engines do not)</span></label>
+      <input id="s_keywords" placeholder="data analytics course, power bi training, delhi">
+    </fieldset>
+
+    <fieldset>
+      <legend>Social share</legend>
+      <div class="legend-sub">What WhatsApp, LinkedIn, Facebook and X show when the link is shared. Blank fields fall back to the Search values above.</div>
+      <div class="row2">
+        <div><label>OG Title</label><input id="s_og_title" placeholder="(blank = page title)"></div>
+        <div><label>OG Type</label>
+          <select id="s_og_type">
+            <option value="website">website</option>
+            <option value="article">article</option>
+            <option value="profile">profile</option>
+          </select></div>
+      </div>
+      <label>OG Description</label>
+      <textarea id="s_og_description" class="sm" placeholder="(blank = meta description)"></textarea>
+      <div class="row2">
+        <div><label>Share Image <span class="hint">(1200×630 works best)</span></label>
+          <input id="s_og_image" placeholder="(blank = global default) images/… or https://…"></div>
+        <div><label>Twitter Card</label>
+          <select id="s_twitter_card">
+            <option value="summary_large_image">summary_large_image</option>
+            <option value="summary">summary</option>
+          </select></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Local / GEO</legend>
+      <div class="legend-sub">Fill this in for branch pages so the page ranks for "near me" searches and shows on maps. Leave blank on non-location pages.</div>
+      <div class="row3">
+        <div><label>Region code</label><input id="s_geo_region" placeholder="IN-DL"></div>
+        <div><label>Place name</label><input id="s_geo_placename" placeholder="New Delhi"></div>
+        <div><label>Coordinates <span class="hint">lat;long</span></label><input id="s_geo_position" placeholder="28.5921;77.0460"></div>
+      </div>
+      <div class="row3">
+        <div><label>Street address</label><input id="s_geo_street" placeholder="YC Co-Working Space, Dwarka Sec-13"></div>
+        <div><label>City / locality</label><input id="s_geo_locality" placeholder="New Delhi"></div>
+        <div><label>Postal code</label><input id="s_geo_postal" placeholder="110078"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Answer engines (AEO)</legend>
+      <div class="legend-sub">Structured data is what ChatGPT, Gemini, Perplexity and Google's AI answers actually read. FAQs are the highest-value block you can add.</div>
+      <div class="row2">
+        <div><label>Schema type</label>
+          <select id="s_schema_type">
+            <option value="auto">auto — pick by page type (recommended)</option>
+            <option value="WebPage">WebPage</option>
+            <option value="LocalBusiness">LocalBusiness / branch</option>
+            <option value="Course">Course</option>
+            <option value="Organization">Organization</option>
+            <option value="none">none</option>
+          </select>
+          <div class="hint"><strong>auto</strong>: home → Organization, branch-* → LocalBusiness, course pages → Course, everything else → WebPage.</div>
+        </div>
+        <div><label>Speakable selectors <span class="hint">(optional, comma separated)</span></label>
+          <input id="s_speakable" placeholder="h1, .course-hero-sub">
+          <div class="hint">Marks the text voice assistants should read aloud.</div>
+        </div>
+      </div>
+
+      <label style="margin-top:18px">FAQs on this page</label>
+      <div class="hint" style="margin-bottom:10px">Question and answer pairs. These become FAQPage schema — the block most likely to get you quoted in an AI answer. Add only questions the page genuinely answers.</div>
+      <div id="faqWrap"></div>
+      <button class="btn2 btn-g btn-sm" onclick="addFaq('','')">+ Add FAQ</button>
+
+      <label style="margin-top:20px">Custom JSON-LD <span class="hint">(advanced — overrides the schema type above)</span></label>
+      <textarea id="s_schema_json" class="mono" placeholder='{"@context":"https://schema.org","@type":"WebPage","name":"…"}'></textarea>
+      <div class="hint">Must be valid JSON. If it does not parse it is ignored, and the schema type above is used instead.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Status</legend>
+      <label><input type="checkbox" id="s_enabled" style="width:auto;margin-right:8px">Managed tags active on this page</label>
+      <div class="hint">Unchecked = this page is served exactly as its HTML file is, with nothing injected.</div>
+    </fieldset>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn2 btn-p" onclick="seoSave()">Save Page</button>
+      <button class="btn2 btn-g" onclick="goSeo()">Cancel</button>
+    </div>
+    <div class="msg" id="seoEditMsg"></div>
+  </div>
+</div>
+
+<!-- ══════════════ GLOBAL SETTINGS ══════════════ -->
+<div class="adm-wrap hidden" id="globalView">
+  <div class="toolbar"><h2>Global Settings</h2></div>
+  <div class="banner info">These apply site-wide and fill in the blanks on every page.</div>
+  <div class="card">
+    <fieldset>
+      <legend>Site</legend>
+      <div class="row2">
+        <div><label>Base URL <span class="hint">(no trailing slash)</span></label><input id="g_base_url" placeholder="https://thexlacademy.com"></div>
+        <div><label>Site name</label><input id="g_site_name" placeholder="The XL Academy"></div>
+      </div>
+      <div class="row3">
+        <div><label>Locale</label><input id="g_locale" placeholder="en_IN"></div>
+        <div><label>Default share image</label><input id="g_default_og_image" placeholder="images/logo.png"></div>
+        <div><label>Twitter handle</label><input id="g_twitter_site" placeholder="@thexlacademy"></div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Organisation</legend>
+      <div class="legend-sub">Used in the Organization / LocalBusiness schema on every page.</div>
+      <div class="row2">
+        <div><label>Legal name</label><input id="g_org_legal_name" placeholder="The XL Academy"></div>
+        <div><label>Logo</label><input id="g_org_logo" placeholder="images/logo.png"></div>
+      </div>
+      <div class="row2">
+        <div><label>Phone</label><input id="g_org_phone" placeholder="+917303609096"></div>
+        <div><label>Email</label><input id="g_org_email" placeholder="support@thexlacademy.com"></div>
+      </div>
+      <label>Head office street</label>
+      <input id="g_org_street" placeholder="YC Co-Working Space, Dwarka Sec-13">
+      <div class="row3">
+        <div><label>City</label><input id="g_org_locality" placeholder="New Delhi"></div>
+        <div><label>Region</label><input id="g_org_region" placeholder="DL"></div>
+        <div><label>Postal code</label><input id="g_org_postal" placeholder="110078"></div>
+      </div>
+      <label>Social profile URLs <span class="hint">(one per line — becomes sameAs)</span></label>
+      <textarea id="g_org_sameas" class="sm"></textarea>
+    </fieldset>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="btn2 btn-p" onclick="globalSave()">Save Settings</button>
+    </div>
+    <div class="msg" id="globalMsg"></div>
+  </div>
+</div>
+
+<script>
+// One unified backend for blog posts + SEO/GEO/AEO tags.
+var API = 'admin-api.php';
+
+var PW    = sessionStorage.getItem('xlblog_pw') || '';
+var POSTS = [];      // blog posts, indexed by rendered row order
+var SEO   = null;    // {global, pages, defaults}
+var SEO_ORDER = [];  // page slugs, indexed by rendered row order
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function val(id){ var el=document.getElementById(id); return el?el.value:''; }
+function set(id,v){ var el=document.getElementById(id); if(el) el.value=(v==null?'':v); }
+
+var VIEWS=['loginView','dashView','editView','seoView','seoEditView','globalView'];
+function show(id){
+  VIEWS.forEach(function(v){ document.getElementById(v).classList.toggle('hidden', v!==id); });
+  var tabs={tabBlog:(id==='dashView'||id==='editView'),tabSeo:(id==='seoView'||id==='seoEditView'),tabGlob:(id==='globalView')};
+  Object.keys(tabs).forEach(function(t){ document.getElementById(t).classList.toggle('on',tabs[t]); });
+}
+
+function apiGet(qs){ return fetch(API+'?'+qs).then(function(r){return r.json();}); }
+function apiPost(body){
+  body.password = PW;
+  return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(body)}).then(function(r){return r.json();});
+}
+function say(id,text,kind){
+  var m=document.getElementById(id); if(!m) return;
+  m.style.color = kind==='ok' ? '#157a3c' : kind==='err' ? '#b91c1c' : 'var(--muted)';
+  m.textContent = text;
+}
+
+/* ══════════════ AUTH ══════════════ */
+function login(){
+  var pw=val('pw');
+  say('loginMsg','Checking…');
+  apiGet('action=auth&password='+encodeURIComponent(pw))
+    .then(function(d){
+      if(d && d.ok){ PW=pw; sessionStorage.setItem('xlblog_pw',pw); enter(); }
+      else say('loginMsg','Wrong password.','err');
+    })
+    .catch(function(){ say('loginMsg','Login failed — is admin-api.php uploaded?','err'); });
+}
+function logout(){
+  PW=''; SEO=null;
+  sessionStorage.removeItem('xlblog_pw');
+  document.getElementById('whoBox').classList.add('hidden');
+  document.getElementById('tabBar').classList.add('hidden');
+  show('loginView');
+}
+function enter(){
+  document.getElementById('whoBox').classList.remove('hidden');
+  document.getElementById('tabBar').classList.remove('hidden');
+  goBlog();
+}
+
+/* ══════════════ BLOG ══════════════ */
+function goBlog(){ show('dashView'); loadPosts(); }
+
+function loadPosts(){
+  var wrap=document.getElementById('listWrap');
+  wrap.innerHTML='<p style="color:var(--muted)">Loading…</p>';
+  apiGet('action=all&password='+encodeURIComponent(PW))
+    .then(function(d){
+      if(d.error){ wrap.innerHTML='<p style="color:#b91c1c">'+esc(d.error)+'</p>'; return; }
+      POSTS=(d.posts||[]).slice().reverse();
+      if(!POSTS.length){ wrap.innerHTML='<p style="color:var(--muted)">No posts yet. Click “+ New Post”.</p>'; return; }
+      var rows=POSTS.map(function(p,i){
+        return '<tr><td><strong>'+esc(p.title)+'</strong><div class="hint">/'+esc(p.slug)+'</div></td>'
+          +'<td class="hide-sm">'+esc(p.category||'')+'</td>'
+          +'<td class="hide-sm">'+esc(p.date||'')+'</td>'
+          +'<td><span class="pill '+(p.status==='published'?'pub':'dft')+'">'+esc(p.status||'draft')+'</span></td>'
+          +'<td class="act"><a onclick="editPost('+i+')">Edit</a>'
+          +'<a href="blog-post?slug='+encodeURIComponent(p.slug||p.id)+'" target="_blank">View</a></td></tr>';
+      }).join('');
+      wrap.innerHTML='<table><thead><tr><th>Title</th><th class="hide-sm">Category</th><th class="hide-sm">Date</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    })
+    .catch(function(){ wrap.innerHTML='<p style="color:#b91c1c">Could not load posts.</p>'; });
+}
+
+function fillPost(p){
+  set('f_id',p.id); set('f_title',p.title); set('f_slug',p.slug);
+  set('f_category',p.category); set('f_author',p.author); set('f_date',p.date);
+  set('f_image',p.image); set('f_excerpt',p.excerpt); set('f_content',p.content);
+  set('f_status',p.status||'published');
+  say('editMsg','');
+}
+function newPost(){
+  fillPost({author:'The XL Academy',status:'published',date:new Date().toISOString().slice(0,10)});
+  document.getElementById('editTitle').textContent='New Post';
+  document.getElementById('delBtn').classList.add('hidden');
+  show('editView');
+}
+function editPost(i){
+  var p=POSTS[i]; if(!p) return;
+  fillPost(p);
+  document.getElementById('editTitle').textContent='Edit Post';
+  document.getElementById('delBtn').classList.remove('hidden');
+  show('editView');
+}
+function autoslug(){
+  var s=document.getElementById('f_slug');
+  if(s.value.trim()) return;
+  s.value=val('f_title').toLowerCase().trim().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').substring(0,80);
+}
+function savePost(){
+  if(!val('f_title').trim()){ say('editMsg','Title is required.','err'); return; }
+  autoslug();
+  var p={id:val('f_id'),title:val('f_title'),slug:val('f_slug'),category:val('f_category'),
+    author:val('f_author'),date:val('f_date'),image:val('f_image'),excerpt:val('f_excerpt'),
+    content:val('f_content'),status:val('f_status')};
+  say('editMsg','Saving…');
+  apiPost({action:p.id?'update':'create', id:p.id, post:p}).then(function(d){
+    if(d.result==='success'){ say('editMsg','✓ Saved.','ok'); setTimeout(goBlog,600); }
+    else say('editMsg','Error: '+(d.error||'save failed'),'err');
+  }).catch(function(){ say('editMsg','Save failed (network).','err'); });
+}
+function deleteCurrent(){
+  var id=val('f_id'); if(!id) return;
+  if(!confirm('Delete this post permanently?')) return;
+  say('editMsg','Deleting…');
+  apiPost({action:'delete',id:id}).then(function(d){
+    if(d.result==='success') goBlog();
+    else say('editMsg','Error: '+(d.error||'delete failed'),'err');
+  }).catch(function(){ say('editMsg','Delete failed.','err'); });
+}
+
+/* ══════════════ SEO / GEO / AEO ══════════════ */
+function goSeo(){ show('seoView'); loadSeo(); }
+
+function loadSeo(){
+  var wrap=document.getElementById('seoListWrap');
+  wrap.innerHTML='<p style="color:var(--muted)">Loading…</p>';
+  say('seoListMsg','');
+  apiGet('action=seo_all&password='+encodeURIComponent(PW))
+    .then(function(d){
+      if(d.error){ wrap.innerHTML='<p style="color:#b91c1c">'+esc(d.error)+'</p>'; return; }
+      SEO=d;
+      renderSeoList();
+    })
+    .catch(function(){ wrap.innerHTML='<p style="color:#b91c1c">Could not load SEO data.</p>'; });
+}
+
+function renderSeoList(){
+  var wrap=document.getElementById('seoListWrap');
+  SEO_ORDER=Object.keys(SEO.pages||{}).sort();
+  if(!SEO_ORDER.length){
+    wrap.innerHTML='<div class="card" style="text-align:center;padding:40px 26px">'
+      +'<p style="color:var(--muted);margin-bottom:16px">No pages imported yet.</p>'
+      +'<button class="btn2 btn-p" onclick="seoScan()">🔄 Scan pages now</button></div>';
+    return;
+  }
+  var rows=SEO_ORDER.map(function(slug,i){
+    var p=SEO.pages[slug]||{};
+    var tl=(p.title||'').length, dl=(p.description||'').length;
+    var flags='';
+    flags+='<span class="pill '+(tl===0?'no':(tl>60?'mid':'ok'))+'" title="title length">T '+tl+'</span> ';
+    flags+='<span class="pill '+(dl===0?'no':(dl>160?'mid':'ok'))+'" title="description length">D '+dl+'</span> ';
+    if(p.geo_position) flags+='<span class="pill ok" title="has geo coordinates">GEO</span> ';
+    if(p.faq&&p.faq.length) flags+='<span class="pill ok" title="FAQ entries">FAQ '+p.faq.length+'</span> ';
+    if(p.enabled===false) flags+='<span class="pill no">off</span>';
+    return '<tr><td><strong>/'+esc(slug)+'</strong>'
+      +'<div class="hint">'+esc((p.title||'— no title —').substring(0,90))+'</div></td>'
+      +'<td>'+flags+'</td>'
+      +'<td class="hide-sm">'+esc(p.robots||'')+'</td>'
+      +'<td class="hide-sm">'+esc(p.schema_type||'auto')+'</td>'
+      +'<td class="act"><a onclick="seoEdit('+i+')">Edit</a>'
+      +'<a href="'+esc(slug==='index'?'/':slug)+'" target="_blank">View</a></td></tr>';
+  }).join('');
+  wrap.innerHTML='<table><thead><tr><th>Page</th><th>Tags</th><th class="hide-sm">Robots</th>'
+    +'<th class="hide-sm">Schema</th><th>Actions</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+
+function seoScan(){
+  say('seoListMsg','Scanning pages on the server…');
+  apiPost({action:'seo_scan'}).then(function(d){
+    if(d.result!=='success'){ say('seoListMsg','Error: '+(d.error||'scan failed'),'err'); return; }
+    var added=(d.added||[]).length, kept=(d.already_managed||[]).length;
+    say('seoListMsg','✓ Imported '+added+' new page'+(added===1?'':'s')+'. '+kept+' already managed and left unchanged.','ok');
+    loadSeo();
+  }).catch(function(){ say('seoListMsg','Scan failed (network).','err'); });
+}
+
+function count(inputId,counterId,limit){
+  var n=val(inputId).length, c=document.getElementById(counterId);
+  if(!c) return;
+  c.textContent=n+' / '+limit;
+  c.className='counter'+(n>limit?' bad':(n>limit*0.9?' warn':''));
+}
+
+function addFaq(q,a){
+  var wrap=document.getElementById('faqWrap');
+  var row=document.createElement('div');
+  row.className='faq-row';
+  row.innerHTML='<input class="faq-q" placeholder="Question — e.g. How long is the course?">'
+    +'<textarea class="faq-a sm" style="min-height:44px" placeholder="A direct, complete answer in 1–3 sentences."></textarea>'
+    +'<button class="btn2 btn-d btn-sm" onclick="this.parentNode.remove()" title="Remove">✕</button>';
+  wrap.appendChild(row);
+  row.querySelector('.faq-q').value=q||'';
+  row.querySelector('.faq-a').value=a||'';
+}
+
+var SEO_FIELDS=['title','description','keywords','canonical','robots','og_title','og_description',
+  'og_image','og_type','twitter_card','geo_region','geo_placename','geo_position','geo_street',
+  'geo_locality','geo_postal','schema_type','schema_json','speakable'];
+
+function seoEdit(i){
+  var slug=SEO_ORDER[i]; if(!slug) return;
+  var p=SEO.pages[slug]||{};
+  set('s_slug',slug);
+  SEO_FIELDS.forEach(function(f){ set('s_'+f, p[f]==null?'':p[f]); });
+  if(!val('s_robots'))       set('s_robots','index,follow');
+  if(!val('s_og_type'))      set('s_og_type','website');
+  if(!val('s_twitter_card')) set('s_twitter_card','summary_large_image');
+  if(!val('s_schema_type'))  set('s_schema_type','auto');
+  document.getElementById('s_enabled').checked = (p.enabled!==false);
+
+  document.getElementById('faqWrap').innerHTML='';
+  (p.faq||[]).forEach(function(row){ addFaq(row.q,row.a); });
+
+  count('s_title','c_title',60);
+  count('s_description','c_desc',160);
+  document.getElementById('seoEditTitle').textContent='/'+slug;
+  document.getElementById('seoViewLink').href = (slug==='index'?'/':slug);
+  say('seoEditMsg','');
+  show('seoEditView');
+}
+
+function seoSave(){
+  var slug=val('s_slug');
+  if(!slug){ say('seoEditMsg','No page selected.','err'); return; }
+
+  var raw=val('s_schema_json').trim();
+  if(raw){
+    try{ JSON.parse(raw); }
+    catch(e){ say('seoEditMsg','Custom JSON-LD is not valid JSON — fix it or clear the box.','err'); return; }
+  }
+
+  var page={};
+  SEO_FIELDS.forEach(function(f){ page[f]=val('s_'+f); });
+  page.enabled=document.getElementById('s_enabled').checked;
+  page.faq=[];
+  var rows=document.getElementById('faqWrap').querySelectorAll('.faq-row');
+  for(var i=0;i<rows.length;i++){
+    var q=rows[i].querySelector('.faq-q').value.trim();
+    var a=rows[i].querySelector('.faq-a').value.trim();
+    if(q&&a) page.faq.push({q:q,a:a});
+  }
+
+  say('seoEditMsg','Saving…');
+  apiPost({action:'seo_save_page',slug:slug,page:page}).then(function(d){
+    if(d.result==='success'){ say('seoEditMsg','✓ Saved — live immediately on /'+slug,'ok'); setTimeout(goSeo,800); }
+    else say('seoEditMsg','Error: '+(d.error||'save failed'),'err');
+  }).catch(function(){ say('seoEditMsg','Save failed (network).','err'); });
+}
+
+/* ══════════════ GLOBAL SETTINGS ══════════════ */
+var GLOBAL_FIELDS=['base_url','site_name','locale','default_og_image','twitter_site',
+  'org_legal_name','org_logo','org_phone','org_email','org_street','org_locality',
+  'org_region','org_postal','org_sameas'];
+
+function goGlobal(){
+  show('globalView');
+  say('globalMsg','');
+  var fill=function(){
+    var g=(SEO&&SEO.global)||{};
+    GLOBAL_FIELDS.forEach(function(f){ set('g_'+f, g[f]==null?'':g[f]); });
+  };
+  if(SEO) fill();
+  else apiGet('action=seo_all&password='+encodeURIComponent(PW))
+    .then(function(d){ if(!d.error){ SEO=d; fill(); } })
+    .catch(function(){ say('globalMsg','Could not load settings.','err'); });
+}
+
+function globalSave(){
+  var g={};
+  GLOBAL_FIELDS.forEach(function(f){ g[f]=val('g_'+f); });
+  say('globalMsg','Saving…');
+  apiPost({action:'seo_save_global',global:g}).then(function(d){
+    if(d.result==='success'){
+      say('globalMsg','✓ Saved — applied across every page.','ok');
+      if(SEO) SEO.global=Object.assign({},SEO.global,g);
+    } else say('globalMsg','Error: '+(d.error||'save failed'),'err');
+  }).catch(function(){ say('globalMsg','Save failed (network).','err'); });
+}
+
+/* ══════════════ AUTO-LOGIN ══════════════ */
+if(PW){
+  apiGet('action=auth&password='+encodeURIComponent(PW))
+    .then(function(d){ if(d&&d.ok) enter(); else logout(); })
+    .catch(function(){});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll Now — The XL Academy</title>
+<meta name="description" content="Enroll in The XL Academy — Data Science, Analytics & MIS courses. Online & Offline. Enroll in 3 simple steps. New batches starting every month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<style>
+.course-hero{background:radial-gradient(800px 500px at 80% 0%,rgba(255,220,80,.18),transparent),linear-gradient(135deg,#b84a00 0%,var(--orange-d) 45%,var(--orange) 100%)}
+.enroll-grid{display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:start}
+.enroll-form-card{background:#eaf1fb;border-radius:var(--radius);padding:32px;box-shadow:0 4px 32px rgba(0,0,0,.09)}
+.enroll-form-card h2{font-size:22px;color:var(--navy);margin-bottom:6px}
+.enroll-form-card .sub{font-size:14px;color:var(--muted);margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.field label .req{color:#e02424;font-weight:700;margin-left:2px}
+.field label .hint{font-weight:400;color:var(--muted);font-size:12px}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s;background:#fff;box-sizing:border-box}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#1a6be0}
+#admissionFormFull.attempted input:invalid,#admissionFormFull.attempted select:invalid,#admissionFormFull.attempted textarea:invalid{border-color:#e02424;background:#fff6f6}
+.field input[readonly]{background:#f1f4f9;color:var(--muted);cursor:not-allowed}
+.field input[type=file]{padding:8px 10px;background:#fff;font-size:13px;color:var(--muted)}
+.field input[type=file]::file-selector-button{font-family:inherit;font-size:13px;padding:6px 12px;margin-right:10px;border:1px solid var(--line);border-radius:7px;background:#f4f6fa;color:var(--ink);cursor:pointer}
+.field input[type=file]::file-selector-button:hover{background:#e9edf4}
+.btn-submit{width:100%;border:none;border-radius:8px;background:#1a6be0;color:#fff;font-size:16px;font-weight:600;padding:14px;cursor:pointer;transition:background .2s;font-family:inherit;margin-top:4px}
+.btn-submit:hover{background:#1257c4}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;font-size:13px;color:var(--muted);align-items:flex-start;margin-bottom:20px;cursor:pointer}
+.consent input{margin-top:2px;flex-shrink:0;accent-color:var(--orange)}
+.form-msg{font-size:14px;font-weight:500;margin-top:12px;min-height:20px;text-align:center}
+.steps-list{display:grid;gap:20px;margin-top:12px}
+.step-row{display:flex;gap:18px;align-items:flex-start}
+.step-bubble{width:44px;height:44px;min-width:44px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);border-radius:50%;font-size:18px;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center}
+.step-text h3{font-size:15px;color:#fff;margin-bottom:4px}
+.step-text p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.55;margin:0}
+.include-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.include-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center}
+.include-card .ic{font-size:30px;margin-bottom:10px}
+.include-card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.include-card p{font-size:12px;color:var(--muted);line-height:1.55;margin:0}
+.course-pick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.course-pick{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;transition:.2s;text-align:left}
+.course-pick:hover,.course-pick.selected{border-color:var(--orange);background:#fff8f3}
+.course-pick .cp-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.course-pick .cp-dur{font-size:12px;color:var(--muted)}
+@media(max-width:980px){.enroll-grid{grid-template-columns:1fr}.include-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.field-row{grid-template-columns:1fr}.include-grid{grid-template-columns:1fr}.course-pick-grid{grid-template-columns:1fr}}
+</style>
+<link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="site-header"></div>
+
+<section class="course-hero" style="padding-bottom:60px">
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">Home</a><span class="sep">›</span><span>Enroll Now</span></nav>
+    <div class="enroll-grid">
+      <div>
+        <div class="rating" style="color:var(--gold);font-size:15px">★★★★★ <span style="color:rgba(255,255,255,.6);font-weight:400">Trusted by 500+ Students</span></div>
+        <h1 style="font-size:clamp(36px,5vw,58px);line-height:1.1;color:#fff;margin:12px 0 16px">Enroll in<br>3 Simple Steps</h1>
+        <p style="font-size:16px;color:rgba(255,255,255,.8);max-width:480px;line-height:1.65;margin-bottom:32px">Fill the form → attend your free demo → confirm your seat. Our team handles everything from batch allocation to study material dispatch.</p>
+        <div class="steps-list">
+          <div class="step-row">
+            <div class="step-bubble">1</div>
+            <div class="step-text"><h3>Fill the Enrollment Form</h3><p>Share your details, preferred course, centre, and timing. Takes less than 2 minutes.</p></div>
+          </div>
+          <div class="step-row">
+            <div class="step-bubble">2</div>
+            <div class="step-text"><h3>Attend a Free Demo Class</h3><p>Join a live demo session — online or offline — to experience the teaching style and ask questions before committing.</p></div>
+          </div>
+          <div class="step-row">
+            <div class="step-bubble">3</div>
+            <div class="step-text"><h3>Confirm Your Seat</h3><p>Pay the registration fee to confirm your seat in the upcoming batch. Study materials and login access are sent immediately.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="enroll-form-card" id="enrollForm">
+        <h2>Apply for Admission</h2>
+        <div class="sub">Our counsellor will call you within 24 hours to confirm your batch.</div>
+        <form id="admissionFormFull" novalidate>
+          <div class="field-row">
+            <div class="field"><label>Student ID</label><input name="studentId" id="studentId" type="text" readonly></div>
+            <div class="field"><label>Full Name <span class="req">*</span></label><input name="fullName" type="text" required placeholder="Full Name"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Mobile No <span class="req">*</span></label><input name="mobile" type="tel" required placeholder="Mobile No" pattern="[0-9]{10}"></div>
+            <div class="field"><label>Alternate Mobile No</label><input name="altMobile" type="tel" placeholder="Alternate Mobile No" pattern="[0-9]{10}"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Email Address <span class="req">*</span></label><input name="email" type="email" required placeholder="Email Address"></div>
+            <div class="field"><label>Total Experience <span class="req">*</span></label>
+              <select name="experience" required>
+                <option value="">Select Experience</option>
+                <option>Fresher (No experience)</option>
+                <option>0 – 1 Year</option>
+                <option>1 – 3 Years</option>
+                <option>3 – 5 Years</option>
+                <option>5 – 10 Years</option>
+                <option>10+ Years</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Courses <span class="req">*</span></label>
+              <select name="course" id="courseSelect" required>
+                <option value="">Select Course</option>
+                <option>Data Science with ML — 8 Months</option>
+                <option>Data Analytics with Python — 6 Months</option>
+                <option>Data Analytics — 4 Months</option>
+                <option>MIS &amp; Reporting — 4 Months</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field"><label>Other Course <span class="hint">(Mention course name if others)</span></label><input name="otherCourse" id="otherCourse" type="text" placeholder="Enter course name if others"></div>
+          </div>
+          <div class="field"><label>Address <span class="req">*</span></label><textarea name="address" required placeholder="Address"></textarea></div>
+          <div class="field"><label>Photo <span class="hint">(Image File Only | Max File Size 2 MB)</span> <span class="req">*</span></label><input name="photo" type="file" accept="image/*" required></div>
+          <div class="field"><label>ID Proof <span class="hint">(Image File Only | Max File Size 2 MB)</span> <span class="req">*</span></label><input name="idProof" type="file" accept="image/*" required></div>
+          <div class="field"><label>Address Proof <span class="hint">(Image File Only | Max File Size 2 MB)</span> <span class="req">*</span></label><input name="addressProof" type="file" accept="image/*" required></div>
+          <button class="btn-submit" type="submit">Submit</button>
+          <div class="form-msg" id="formMsgFull"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">What's Included</span><h2>Everything You Get When You Enroll</h2></div>
+    <div class="include-grid">
+      <div class="include-card"><div class="ic">🎓</div><h3>Live + Recorded Sessions</h3><p>Live online or offline classes with full recordings to revise at your own pace. Never miss a lecture.</p></div>
+      <div class="include-card"><div class="ic">📚</div><h3>Study Materials</h3><p>PDF notes, practice datasets, case studies, and cheat sheets — curated for analytics interviews.</p></div>
+      <div class="include-card"><div class="ic">💻</div><h3>Hands-on Projects</h3><p>3–5 real-world projects per course, hosted on GitHub — ready to show in interviews.</p></div>
+      <div class="include-card"><div class="ic">🎯</div><h3>Doubt Sessions</h3><p>Dedicated doubt-clearing sessions every week — ask anything, as many times as you need.</p></div>
+      <div class="include-card"><div class="ic">🏆</div><h3>Certificate of Completion</h3><p>Industry-recognised certificate upon completing the course and final project evaluation.</p></div>
+      <div class="include-card"><div class="ic">📄</div><h3>Placement Support</h3><p>Resume build, LinkedIn optimisation, mock interviews, and direct company connects — at no extra cost.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Choose Your Course</span><h2>Pick the Right Program for Your Goal</h2></div>
+    <div class="course-pick-grid">
+      <a href="data-science" class="course-pick"><div class="cp-name">🤖 Data Science with ML</div><div class="cp-dur">8 Months · ₹8–20 LPA outcome · Highest tech roles</div></a>
+      <a href="data-analytics-python" class="course-pick"><div class="cp-name">📊 Data Analytics with Python</div><div class="cp-dur">6 Months · ₹4–12 LPA outcome · Best for career switchers</div></a>
+      <a href="data-analytics" class="course-pick"><div class="cp-name">📈 Data Analytics</div><div class="cp-dur">4 Months · ₹3–8 LPA outcome · No coding required</div></a>
+      <a href="mis-reporting" class="course-pick"><div class="cp-name">🗂️ MIS &amp; Reporting</div><div class="cp-dur">4 Months · ₹3–7 LPA outcome · Excel &amp; Power BI focus</div></a>
+    </div>
+    <p style="text-align:center;margin-top:22px;font-size:14px;color:var(--muted)">Not sure which course to pick? <a href="https://wa.me/917303609096" target="_blank" rel="noopener" style="color:var(--orange-d);font-weight:600">WhatsApp us</a> — we'll recommend one based on your background and goals.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);padding-top:0">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Enrolment FAQs</span><h2>Common Questions Before You Enroll</h2></div>
+    <div class="faq-wrap">
+      <details class="faq"><summary>When does the next batch start?</summary><div class="ans">New batches start every month. Once you submit your enrollment form, our counsellor will call you within 24 hours and tell you the exact date of the upcoming batch for your preferred course and timing slot.</div></details>
+      <details class="faq"><summary>Is there a free trial or demo class?</summary><div class="ans">Yes — every student gets a free demo class before they need to pay anything. The demo is a live session (online or at the branch) where you experience the teaching style, meet the faculty, and ask questions. Only after the demo do you confirm your seat.</div></details>
+      <details class="faq"><summary>What payment options are available?</summary><div class="ans">We accept UPI, credit/debit cards, net banking, and bank transfer via our Razorpay payment link. We also offer EMI plans — contact us for details. Education loan assistance is also available.</div></details>
+      <details class="faq"><summary>Can I switch from online to offline or vice versa after enrollment?</summary><div class="ans">Yes, subject to seat availability in the batch. Contact your assigned counsellor within the first 2 weeks to make the switch. Most students who switch do so for scheduling reasons — both modes are fully equivalent in curriculum.</div></details>
+      <details class="faq"><summary>What happens if I miss classes?</summary><div class="ans">All live sessions are recorded. Missed classes can be caught up via recordings. You can also attend equivalent sessions in the next batch to fill gaps — our faculty support ensures no student falls behind.</div></details>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="components.js?v=20260730a"></script>
+<script>
+function scrollToForm(){document.getElementById('enrollForm').scrollIntoView({behavior:'smooth',block:'start'});}
+
+// Paste the Apps Script Web App URL for the ENROLL form here
+// (deploy google-apps-script-enroll.gs — a SEPARATE deployment).
+// Until set, the form redirects without sending.
+var ENROLL_ENDPOINT='https://script.google.com/macros/s/AKfycbzXXoDnJwu1v04uN3bVmKvxOcNXfvIWb4o5S50K4Sejz0nITwbblbrpg5mMDYb_BfNE/exec';
+
+// Auto-generate a unique Student ID: YYMMDD-HHMMSS
+function genStudentId(){
+  var d=new Date(),p=function(n){return String(n).padStart(2,'0');};
+  return String(d.getFullYear()).slice(2)+p(d.getMonth()+1)+p(d.getDate())+'-'+p(d.getHours())+p(d.getMinutes())+p(d.getSeconds());
+}
+document.getElementById('studentId').value=genStudentId();
+
+// "Other Course" is required only when Course = Other
+var courseSel=document.getElementById('courseSelect'), otherCourse=document.getElementById('otherCourse');
+function syncOtherCourse(){
+  var on=courseSel.value==='Other';
+  otherCourse.required=on;
+  otherCourse.disabled=!on;
+  if(!on)otherCourse.value='';
+}
+courseSel.addEventListener('change',syncOtherCourse);syncOtherCourse();
+
+var MAX_BYTES=2*1024*1024; // 2 MB
+
+document.getElementById('admissionFormFull').addEventListener('submit',function(e){
+  e.preventDefault();
+  var form=this, msg=document.getElementById('formMsgFull');
+  var fail=function(t){msg.style.color='#e8650a';msg.textContent=t;};
+
+  form.classList.add('attempted');
+  if(!form.checkValidity()){
+    var bad=form.querySelector(':invalid');
+    var lbl='a required field';
+    if(bad){
+      var fld=bad.closest('.field');
+      if(fld&&fld.querySelector('label')) lbl=fld.querySelector('label').textContent.replace(/\*+/g,'').replace(/\(.*?\)/g,'').trim();
+      bad.reportValidity();
+      bad.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    fail('Please fill: '+lbl);
+    return;
+  }
+
+  // Validate each uploaded file: image only, max 2 MB
+  var fileFields=[['photo','Photo'],['idProof','ID Proof'],['addressProof','Address Proof']];
+  for(var i=0;i<fileFields.length;i++){
+    var f=form.elements[fileFields[i][0]].files[0], label=fileFields[i][1];
+    if(!f){fail(label+' is required.');return;}
+    if(!f.type.startsWith('image/')){fail(label+' must be an image file.');return;}
+    if(f.size>MAX_BYTES){fail(label+' exceeds the 2 MB size limit.');return;}
+  }
+
+  var btn=form.querySelector('button[type="submit"]');
+  var origTxt=btn?btn.textContent:'';
+  if(btn){btn.disabled=true;btn.textContent='Submitting…';}
+  msg.style.color='#5a6478';msg.textContent='Uploading your details… please wait.';
+
+  // Read a file <input> as base64 (strips the data: prefix)
+  function readFile(input){
+    return new Promise(function(resolve,reject){
+      var file=input.files[0];
+      if(!file){resolve(null);return;}
+      var r=new FileReader();
+      r.onload=function(){resolve({name:file.name,type:file.type,data:String(r.result).split(',')[1]});};
+      r.onerror=function(){reject(new Error('read failed'));};
+      r.readAsDataURL(file);
+    });
+  }
+
+  var keys=['photo','idProof','addressProof'];
+  Promise.all(keys.map(function(k){return readFile(form.elements[k]);}))
+    .then(function(f){
+      var payload={
+        studentId:form.elements['studentId'].value,
+        fullName:form.elements['fullName'].value,
+        mobile:form.elements['mobile'].value,
+        altMobile:form.elements['altMobile'].value,
+        email:form.elements['email'].value,
+        experience:form.elements['experience'].value,
+        course:form.elements['course'].value,
+        otherCourse:form.elements['otherCourse'].value,
+        address:form.elements['address'].value,
+        source:(document.title||'')+' | '+location.href,
+        files:{photo:f[0],idProof:f[1],addressProof:f[2]}
+      };
+      if(!ENROLL_ENDPOINT||ENROLL_ENDPOINT.indexOf('PASTE_')===0){
+        console.warn('Enroll form endpoint not configured. Set ENROLL_ENDPOINT in enroll.html.');
+        window.location.href='thank-you.html';return;
+      }
+      // text/plain keeps this a simple request so no-cors can send the large body
+      return fetch(ENROLL_ENDPOINT,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)})
+        .then(function(){window.location.href='thank-you.html';});
+    })
+    .catch(function(){
+      if(btn){btn.disabled=false;btn.textContent=origTxt;}
+      fail('Something went wrong while uploading. Please try again or WhatsApp us.');
+    });
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+# ============================================================
+#  The XL Academy — Apache config (Hostinger / cPanel shared hosting)
+# ============================================================
+
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# Serve index.html for the root and directories
+DirectoryIndex index.html
+
+# ---- Force HTTPS ----
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---- Redirect /page.html -> /page (clean URL, avoids duplicate content) ----
+RewriteCond %{THE_REQUEST} \s/+([^.\s?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ---- The admin panel moved: /blog-admin -> /admin ----
+RewriteRule ^blog-admin/?$ /admin [R=301,L]
+
+# ============================================================
+#  Managed SEO / GEO / AEO tags
+#  Every page URL goes through seo-render.php, which reads the
+#  matching .html file, injects the tags stored in seo-data/, and
+#  outputs the page. It is fail-open: if anything goes wrong it
+#  serves the original HTML untouched.
+#  Requests for real files (images, css, js, *.php) never come here.
+# ============================================================
+
+# ---- Homepage ----
+RewriteRule ^$ seo-render.php?__page=index [L,QSA]
+
+# ---- /page -> renderer (was: /page -> /page.html) ----
+# __page is deliberately obscure: with QSA the page's own query string is
+# appended after ours, so a plain name like ?p= would be overridden by a
+# real link such as /blog?p=2.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+?)/?$ seo-render.php?__page=$1 [NC,L,QSA]
+
+# ---- Custom error page ----
+# Missing pages are handled inside seo-render.php (it serves 404.html with a
+# 404 status). This stays as a backstop for non-page requests.
+ErrorDocument 404 /404.html
+
+# ============================================================
+#  Performance — compression
+# ============================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json image/svg+xml
+</IfModule>
+
+# ============================================================
+#  Performance — browser caching
+# ============================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html               "access plus 0 seconds"
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+</IfModule>
+
+# ============================================================
+#  Basic security headers
+# ============================================================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

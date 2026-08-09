@@ -1,0 +1,94 @@
+﻿<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">The XL<span> Academy</span></div>
+        <p>Professional training for Data Science, Analytics &amp; MIS — Online &amp; Offline across 6 cities.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/thexla" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.linkedin.com/company/82118270" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.youtube.com/@thexlacademy" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+          <a href="http://instagram.com/academythexl/" target="_blank" rel="noopener" aria-label="Instagram">◉</a>
+        </div>
+      </div>
+      <div>
+        <h4>Branches</h4>
+        <ul>
+          <li><a href="branch-delhi">New Delhi (HO)</a></li>
+          <li><a href="branch-gurugram">Gurugram</a></li>
+          <li><a href="branch-noida">Noida</a></li>
+          <li><a href="branch-bangalore">Bangalore</a></li>
+          <li><a href="branch-pune">Pune</a></li>
+          <li><a href="branch-mumbai">Mumbai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="data-science">Data Science with ML</a></li>
+          <li><a href="data-analytics-python">Data Analytics &amp; Python</a></li>
+          <li><a href="data-analytics">Data Analytics</a></li>
+          <li><a href="mis-reporting">MIS &amp; Reporting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@thexlacademy.com">support@thexlacademy.com</a></li>
+          <li><a href="tel:+917303609096">+91 73036 09096</a></li>
+          <li>HQ: YC Co-Working Space, Dwarka Sec-13, New Delhi 110078</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 The XL Academy. All rights reserved.</div>
+      <div style="display:flex;gap:18px">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="float-cta">
+  <a class="fc-wa" href="https://wa.me/917303609096" target="_blank" rel="noopener" aria-label="WhatsApp">🟢</a>
+  <a class="fc-call" href="tel:+917303609096" aria-label="Call">📞</a>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+    <h3>Book a Free Demo</h3>
+    <div class="sub">Fill in your details and our team will reach out shortly.</div>
+    <form id="admissionForm" novalidate>
+      <div class="field"><label>Full Name</label><input name="name" type="text" required placeholder="Your name"></div>
+      <div class="field"><label>Mobile No</label><input name="mobile" type="tel" required placeholder="10-digit mobile" pattern="[0-9]{10}"></div>
+      <div class="field"><label>Email Address</label><input name="email" type="email" required placeholder="you@email.com"></div>
+      <div class="field"><label>Course / Centre Interest</label>
+        <select name="interest" required>
+          <option value="">Select course or centre</option>
+          <optgroup label="Courses">
+            <option value="Data Science with ML">Data Science with ML — 8 Months</option>
+            <option value="Data Analytics with Python">Data Analytics with Python — 6 Months</option>
+            <option value="Data Analytics">Data Analytics — 4 Months</option>
+            <option value="MIS &amp; Reporting">MIS &amp; Reporting — 4 Months</option>
+          </optgroup>
+          <optgroup label="Preferred Centre">
+            <option value="New Delhi (HQ)">New Delhi (HQ)</option>
+            <option value="Gurugram">Gurugram</option>
+            <option value="Noida">Noida</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Online">Online</option>
+          </optgroup>
+        </select>
+      </div>
+      <label class="consent"><input type="checkbox" required> I agree to the Terms &amp; Conditions and Privacy Policy.</label>
+      <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Submit</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</div>
+

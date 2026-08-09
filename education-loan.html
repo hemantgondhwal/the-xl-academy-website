@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Loan & EMI — The XL Academy</title>
+<meta name="description" content="Finance your data analytics course with education loans, 0% EMI plans, and flexible instalments at The XL Academy. Learn now, pay later.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<style>
+.course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(100,160,255,.18),transparent),linear-gradient(135deg,#0a2045 0%,#0d3270 55%,#1048a8 100%)}
+.loan-options{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.loan-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center;transition:.2s;position:relative}
+.loan-card:hover{border-color:var(--orange);box-shadow:var(--shadow);transform:translateY(-4px)}
+.loan-card .lo-ic{font-size:42px;margin-bottom:14px}
+.loan-card h3{font-size:17px;color:var(--navy);margin-bottom:8px}
+.loan-card p{font-size:13px;color:var(--muted);line-height:1.65;margin:0 0 18px}
+.loan-tag{display:inline-block;background:#e6f0ff;color:#1a52a8;border-radius:50px;padding:4px 14px;font-size:12px;font-weight:700}
+.loan-tag.green{background:#e6f9ee;color:#157a3c}
+.loan-tag.orange{background:#fff3eb;color:#d45f00}
+.best-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;border-radius:50px;padding:4px 14px}
+.emi-table{width:100%;border-collapse:collapse;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.emi-table th{background:var(--navy);color:#fff;padding:14px 20px;text-align:left;font-size:13px;font-weight:600}
+.emi-table td{padding:14px 20px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink)}
+.emi-table tr:last-child td{border-bottom:none}
+.emi-table tr:nth-child(even) td{background:var(--bg-soft)}
+.emi-highlight{font-weight:700;color:var(--navy)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.how-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px;text-align:center}
+.how-num{width:38px;height:38px;background:var(--navy);color:#fff;border-radius:50%;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.how-card h3{font-size:14px;color:var(--navy);margin-bottom:6px}
+.how-card p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+.docs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.docs-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.docs-card h4{font-size:15px;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.docs-list{list-style:none}
+.docs-list li{font-size:13px;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--bg-soft);display:flex;gap:8px}
+.docs-list li:last-child{border-bottom:none}
+.docs-list li::before{content:'✓';color:#1a9c3e;font-weight:700;flex-shrink:0}
+.loan-form-card{background:linear-gradient(160deg,#eafaf1 0%,#e7f5f7 55%,#eef2fb 100%);border-radius:var(--radius);padding:32px;box-shadow:0 4px 32px rgba(0,0,0,.09)}
+.loan-form-card h2{font-size:20px;color:var(--navy);margin-bottom:6px}
+.loan-form-card .sub{font-size:13px;color:var(--muted);margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.field label .req{color:#e02424;font-weight:700;margin-left:2px}
+.field label .hint{font-weight:400;color:var(--muted);font-size:12px}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s;background:#fff;box-sizing:border-box}
+.field textarea{min-height:80px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#1a6be0}
+#loanForm.attempted input:invalid,#loanForm.attempted select:invalid,#loanForm.attempted textarea:invalid{border-color:#e02424;background:#fff6f6}
+#loanForm.attempted .consent input:invalid{outline:2px solid #e02424;outline-offset:2px}
+.field input[readonly]{background:#f1f4f9;color:var(--muted);cursor:not-allowed}
+.field input[type=file]{padding:8px 10px;background:#fff;font-size:13px;color:var(--muted)}
+.field input[type=file]::file-selector-button{font-family:inherit;font-size:13px;padding:6px 12px;margin-right:10px;border:1px solid var(--line);border-radius:7px;background:#f4f6fa;color:var(--ink);cursor:pointer}
+.field input[type=file]::file-selector-button:hover{background:#e9edf4}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;font-size:13px;color:var(--muted);align-items:flex-start;margin-bottom:18px;cursor:pointer}
+.consent input{margin-top:2px;flex-shrink:0;accent-color:#1a6be0}
+.btn-submit{width:100%;border:none;border-radius:8px;background:#1a6be0;color:#fff;font-size:16px;font-weight:600;padding:14px;cursor:pointer;transition:background .2s;font-family:inherit}
+.btn-submit:hover{background:#1257c4}
+.form-msg{font-size:14px;font-weight:500;margin-top:10px;min-height:18px;text-align:center}
+@media(max-width:980px){.loan-options{grid-template-columns:1fr}.how-grid{grid-template-columns:repeat(2,1fr)}.docs-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.how-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}}
+</style>
+<link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="site-header"></div>
+
+<section class="course-hero">
+  <div class="container course-hero-grid">
+    <div>
+      <nav class="breadcrumb"><a href="/">Home</a><span class="sep">›</span><span>Education Loan</span></nav>
+      <div class="rating" style="color:var(--gold);font-size:15px">🏦 <span style="color:rgba(255,255,255,.6);font-weight:400">Flexible Finance Options</span></div>
+      <h1>Education Loan<br>&amp; Easy EMI</h1>
+      <p class="course-hero-sub">Don't let finances be the reason you delay building a ₹10–20 LPA career. We offer 0% EMI, instalment plans, and education loan assistance — so you can start learning now and pay as your career grows.</p>
+      <div class="qbadges">
+        <span class="qbadge">💳 <b>0% EMI Available</b></span>
+        <span class="qbadge">🏦 <b>Education Loans</b></span>
+        <span class="qbadge">📅 <b>Flexible Instalments</b></span>
+        <span class="qbadge">⚡ <b>Quick Approval</b></span>
+      </div>
+      <div class="course-hero-actions">
+        <a href="https://wa.me/917303609096" target="_blank" rel="noopener" class="btn btn-wa">Ask About Loan</a>
+      </div>
+    </div>
+    <div class="hero-info-card">
+      <h3>💰 Finance Summary</h3>
+      <div class="info-pill"><span class="dot"></span>0% EMI on credit card (select banks)</div>
+      <div class="info-pill"><span class="dot"></span>2–3 instalment plan (direct)</div>
+      <div class="info-pill"><span class="dot"></span>Education loan via partner NBFCs</div>
+      <div class="info-pill"><span class="dot"></span>No collateral for courses under ₹4 lakh</div>
+      <div class="info-pill"><span class="dot"></span>Loan approval in 24–72 hours</div>
+      <div class="info-pill"><span class="dot"></span>Repayment starts after course completion</div>
+    </div>
+  </div>
+</section>
+
+<section class="info-strip">
+  <div class="container" style="padding-top:0;padding-bottom:0">
+    <div class="info-strip-inner">
+      <div class="info-item"><div class="info-ic">💳</div><div><div class="info-val">0% Interest</div><div class="info-lbl">EMI on select credit cards</div></div></div>
+      <div class="info-item"><div class="info-ic">📅</div><div><div class="info-val">3 Instalments</div><div class="info-lbl">Spread cost over 3 months</div></div></div>
+      <div class="info-item"><div class="info-ic">⚡</div><div><div class="info-val">24–72 Hours</div><div class="info-lbl">Loan approval timeline</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Finance Options</span><h2>3 Ways to Finance Your Course</h2><p>Choose the plan that suits your situation — all options are available for every course.</p></div>
+    <div class="loan-options">
+      <div class="loan-card" style="position:relative">
+        <div class="best-badge">Most Popular</div>
+        <div class="lo-ic">📅</div>
+        <h3>Instalment Plan</h3>
+        <p>Pay the course fee in 2–3 instalments directly to us — no bank, no interest, no paperwork. First instalment confirms your seat.</p>
+        <span class="loan-tag green">0% Interest</span>
+      </div>
+      <div class="loan-card">
+        <div class="lo-ic">💳</div>
+        <h3>Credit Card EMI</h3>
+        <p>Use your credit card's EMI feature via Razorpay. 0% EMI available on HDFC, ICICI, Axis, Kotak, and SBI credit cards for 3–12 months.</p>
+        <span class="loan-tag">3–12 Month EMI</span>
+      </div>
+      <div class="loan-card">
+        <div class="lo-ic">🏦</div>
+        <h3>Education Loan</h3>
+        <p>Apply via our NBFC and fintech partner network. Collateral-free loans for eligible students. Repayment typically begins after course completion.</p>
+        <span class="loan-tag orange">Via Loan Partners</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);padding-top:0">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Sample EMI Plans</span><h2>What Your Monthly EMI Could Look Like</h2><p>Indicative amounts — actual fee and EMI will be confirmed by your counsellor. Contact us for exact course pricing.</p></div>
+    <div style="overflow-x:auto">
+    <table class="emi-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Duration</th>
+          <th>3-Month EMI</th>
+          <th>6-Month EMI</th>
+          <th>12-Month EMI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Data Science with ML</strong></td>
+          <td>8 Months</td>
+          <td class="emi-highlight">~₹5,000/mo</td>
+          <td>~₹2,500/mo</td>
+          <td>~₹1,300/mo</td>
+        </tr>
+        <tr>
+          <td><strong>Data Analytics with Python</strong></td>
+          <td>6 Months</td>
+          <td class="emi-highlight">~₹4,000/mo</td>
+          <td>~₹2,100/mo</td>
+          <td>~₹1,100/mo</td>
+        </tr>
+        <tr>
+          <td><strong>Data Analytics</strong></td>
+          <td>4 Months</td>
+          <td class="emi-highlight">~₹3,000/mo</td>
+          <td>~₹1,600/mo</td>
+          <td>~₹850/mo</td>
+        </tr>
+        <tr>
+          <td><strong>MIS &amp; Reporting</strong></td>
+          <td>4 Months</td>
+          <td class="emi-highlight">~₹2,500/mo</td>
+          <td>~₹1,400/mo</td>
+          <td>~₹730/mo</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:12px">* These are approximate indicative ranges. Contact +91 73036 09096 for exact course fee and EMI breakdown. Credit card 0% EMI availability depends on your bank and card type.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">How It Works</span><h2>Apply for a Loan in 4 Steps</h2></div>
+    <div class="how-grid">
+      <div class="how-card"><div class="how-num">1</div><h3>Talk to Our Team</h3><p>Call or WhatsApp +91 73036 09096 and mention you'd like loan assistance. We'll guide you to the right option.</p></div>
+      <div class="how-card"><div class="how-num">2</div><h3>Choose Loan Type</h3><p>We'll match you to the right option — instalment plan, card EMI, or NBFC loan — based on your profile.</p></div>
+      <div class="how-card"><div class="how-num">3</div><h3>Submit Documents</h3><p>For NBFC loans: submit KYC documents and income/student proof. Process takes 24–72 hours for approval.</p></div>
+      <div class="how-card"><div class="how-num">4</div><h3>Start Your Course</h3><p>Once approved, your seat is confirmed and you start your batch — repayment begins after you complete the course.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);padding-top:0">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Documents Required</span><h2>What You'll Need for a Loan Application</h2></div>
+    <div class="docs-grid">
+      <div class="docs-card">
+        <h4>📋 KYC Documents</h4>
+        <ul class="docs-list">
+          <li>Aadhaar Card (front and back)</li>
+          <li>PAN Card</li>
+          <li>Passport-size photograph</li>
+          <li>Bank account statement (last 3 months)</li>
+          <li>Cancelled cheque or passbook copy</li>
+        </ul>
+      </div>
+      <div class="docs-card">
+        <h4>🎓 Student / Income Proof</h4>
+        <ul class="docs-list">
+          <li>Last qualification marksheet / degree certificate</li>
+          <li>Latest salary slip (if employed)</li>
+          <li>Employment letter or offer letter (if available)</li>
+          <li>IT returns or Form 16 (if applicable)</li>
+          <li>Co-applicant documents if required by the lender</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:16px">Document requirements may vary by loan partner. Our team will tell you exactly what's needed for your specific loan type. WhatsApp us to start the process.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" style="max-width:600px;margin-bottom:36px"><span class="eyebrow">Loan Application</span><h2>Apply for an Education Loan</h2><p>Fill your details, upload your documents, and our finance counsellor will review and call you within 24 hours.</p></div>
+    <div style="max-width:660px;margin:0 auto">
+      <div class="loan-form-card">
+        <h2>Education Loan Application</h2>
+        <div class="sub">Fill your details and upload documents — our finance counsellor will review and call you within 24 hours.</div>
+        <form id="loanForm" novalidate>
+          <div class="field-row">
+            <div class="field"><label>Student ID <span class="req">*</span></label><input name="studentId" id="loanStudentId" type="text" required placeholder="Enter your Student ID"></div>
+            <div class="field"><label>Full Name <span class="hint">(As per Aadhaar)</span> <span class="req">*</span></label><input name="fname" type="text" required placeholder="First Name"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Last Name</label><input name="lname" type="text" placeholder="Last Name"></div>
+            <div class="field"><label>Mobile No. <span class="req">*</span></label><input name="mobile" type="tel" required placeholder="Mobile No" pattern="[0-9]{10}"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Alternate No</label><input name="altMobile" type="tel" placeholder="Alternate No" pattern="[0-9]{10}"></div>
+            <div class="field"><label>Email ID <span class="req">*</span></label><input name="email" type="email" required placeholder="Email Address"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Course Opted <span class="req">*</span></label>
+              <select name="course" required>
+                <option value="">Select Course</option>
+                <option>Data Science with ML — 8 Months</option>
+                <option>Data Analytics with Python — 6 Months</option>
+                <option>Data Analytics — 4 Months</option>
+                <option>MIS &amp; Reporting — 4 Months</option>
+              </select>
+            </div>
+            <div class="field"><label>Loan Amount <span class="req">*</span></label><input name="loanAmount" type="number" min="0" step="any" required placeholder="Enter Loan Amount"></div>
+          </div>
+          <div class="field"><label>Address <span class="hint">(As per Aadhaar)</span></label><textarea name="address" placeholder="Enter Your Address"></textarea></div>
+          <div class="field-row">
+            <div class="field"><label>Aadhaar Card (Front) <span class="hint">(Max File Size 2 MB, Image Only)</span> <span class="req">*</span></label><input name="aadhaarFront" type="file" accept="image/*" required></div>
+            <div class="field"><label>Aadhaar Card (Back) <span class="hint">(Max File Size 2 MB, Image Only)</span> <span class="req">*</span></label><input name="aadhaarBack" type="file" accept="image/*" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>PAN Card <span class="hint">(Max File Size 2 MB, Image Only)</span> <span class="req">*</span></label><input name="panCard" type="file" accept="image/*" required></div>
+            <div class="field"><label>Passport size Photo <span class="hint">(Max File Size 2 MB, Image Only)</span> <span class="req">*</span></label><input name="photo" type="file" accept="image/*" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Bank Statement Last 6 Months <span class="hint">(Max File Size 3 MB, PDF Only)</span> <span class="req">*</span></label><input name="bankStatement" type="file" accept="application/pdf" required></div>
+            <div class="field"><label>Bank Statement Password <span class="hint">If Any</span></label><input name="bankPassword" type="text" placeholder="Bank Statement Password If Any"></div>
+          </div>
+          <label class="consent"><input type="checkbox" required> I agree to the <a href="#" style="color:#1257c4;font-weight:600">Terms &amp; Conditions</a> and <a href="#" style="color:#1257c4;font-weight:600">Privacy Policy</a> and give my consent to receive updates through SMS/Email.</label>
+          <button class="btn-submit" type="submit">Submit</button>
+          <div class="form-msg" id="loanFormMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);padding-top:0">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Loan FAQs</span><h2>Common Questions About Education Loans</h2></div>
+    <div class="faq-wrap">
+      <details class="faq"><summary>Do I need a guarantor or collateral for a loan?</summary><div class="ans">For most of our courses (which fall under ₹4 lakh), loans are available without collateral. A parent or guardian may be required as a co-applicant by some lenders. Our team will guide you based on your specific loan partner options.</div></details>
+      <details class="faq"><summary>Is the 0% EMI really interest-free?</summary><div class="ans">Yes — 0% EMI via Razorpay is genuinely interest-free for eligible credit card holders. Available on HDFC, ICICI, Axis, Kotak, and SBI credit cards for 3, 6, or 12-month tenures. Your bank may charge a processing fee of ₹0–500 depending on your card.</div></details>
+      <details class="faq"><summary>What if I don't get placed — do I still need to repay?</summary><div class="ans">Education loans are independent of placement outcomes — the loan agreement is between you and the lending institution, not The XL Academy. However, our 95% placement rate means the vast majority of students are earning within 3 months of completing the course.</div></details>
+      <details class="faq"><summary>How quickly can a loan be approved?</summary><div class="ans">NBFC and fintech partner loans are typically approved in 24–72 business hours once complete documentation is submitted. Instalment plans with The XL Academy directly are set up same-day after a conversation with your counsellor.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Don't Let Cost Stand Between You and a ₹10 LPA Career</h2>
+      <p>Talk to our finance counsellor today — we'll find a payment plan that works for your situation.</p>
+      <div class="row">
+        <a href="enroll" class="btn btn-primary">Apply Now</a>
+        <a href="https://wa.me/917303609096" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp for Loan Help</a>
+        <a href="tel:+917303609096" class="btn btn-ghost">📞 +91 73036 09096</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="components.js?v=20260730a"></script>
+<script>
+// Paste the Apps Script Web App URL for the LOAN form here
+// (deploy google-apps-script-loan.gs — this is a SEPARATE deployment
+//  from the popup form). Until set, the form redirects without saving.
+var LOAN_ENDPOINT='https://script.google.com/macros/s/AKfycbz4RpTnE66Ym_S5BuwqxtA_qD6t4DMFZ7YJruSXgoB8GH28K3gtqascY9XjQCVyFLLgjA/exec';
+
+var MB=1024*1024;
+
+document.getElementById('loanForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var form=this, msg=document.getElementById('loanFormMsg');
+  var fail=function(t){msg.style.color='#e8650a';msg.textContent=t;};
+
+  form.classList.add('attempted');
+  if(!form.checkValidity()){
+    var bad=form.querySelector(':invalid');
+    var lbl='a required field';
+    if(bad){
+      var fld=bad.closest('.field');
+      if(fld&&fld.querySelector('label')) lbl=fld.querySelector('label').textContent.replace(/\*+/g,'').replace(/\(.*?\)/g,'').trim();
+      else if(bad.type==='checkbox') lbl='the Terms & Conditions consent';
+      bad.reportValidity();
+      bad.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    fail('Please fill: '+lbl);
+    return;
+  }
+
+  // Image uploads: image only, max 2 MB
+  var imgFields=[['aadhaarFront','Aadhaar Card (Front)'],['aadhaarBack','Aadhaar Card (Back)'],['panCard','PAN Card'],['photo','Passport size Photo']];
+  for(var i=0;i<imgFields.length;i++){
+    var f=form.elements[imgFields[i][0]].files[0], label=imgFields[i][1];
+    if(!f){fail(label+' is required.');return;}
+    if(!f.type.startsWith('image/')){fail(label+' must be an image file.');return;}
+    if(f.size>2*MB){fail(label+' exceeds the 2 MB size limit.');return;}
+  }
+
+  // Bank statement: PDF only, max 3 MB
+  var bs=form.elements['bankStatement'].files[0];
+  if(!bs){fail('Bank Statement is required.');return;}
+  if(bs.type!=='application/pdf'){fail('Bank Statement must be a PDF file.');return;}
+  if(bs.size>3*MB){fail('Bank Statement exceeds the 3 MB size limit.');return;}
+
+  var btn=form.querySelector('button[type="submit"]');
+  var origTxt=btn?btn.textContent:'';
+  if(btn){btn.disabled=true;btn.textContent='Submitting…';}
+  msg.style.color='#5a6478';msg.textContent='Uploading your documents… please wait.';
+
+  // Read a file <input> as base64 (strips the data: prefix)
+  function readFile(input){
+    return new Promise(function(resolve,reject){
+      var file=input.files[0];
+      if(!file){resolve(null);return;}
+      var r=new FileReader();
+      r.onload=function(){resolve({name:file.name,type:file.type,data:String(r.result).split(',')[1]});};
+      r.onerror=function(){reject(new Error('read failed'));};
+      r.readAsDataURL(file);
+    });
+  }
+
+  var keys=['aadhaarFront','aadhaarBack','panCard','photo','bankStatement'];
+  Promise.all(keys.map(function(k){return readFile(form.elements[k]);}))
+    .then(function(f){
+      var payload={
+        studentId:form.elements['studentId'].value,
+        fname:form.elements['fname'].value,
+        lname:form.elements['lname'].value,
+        mobile:form.elements['mobile'].value,
+        altMobile:form.elements['altMobile'].value,
+        email:form.elements['email'].value,
+        course:form.elements['course'].value,
+        loanAmount:form.elements['loanAmount'].value,
+        address:form.elements['address'].value,
+        bankPassword:form.elements['bankPassword'].value,
+        source:(document.title||'')+' | '+location.href,
+        files:{aadhaarFront:f[0],aadhaarBack:f[1],panCard:f[2],photo:f[3],bankStatement:f[4]}
+      };
+      if(!LOAN_ENDPOINT||LOAN_ENDPOINT.indexOf('PASTE_')===0){
+        console.warn('Loan form endpoint not configured. Set LOAN_ENDPOINT in education-loan.html.');
+        window.location.href='thank-you.html';return;
+      }
+      // text/plain keeps this a simple request so no-cors can send the large body
+      return fetch(LOAN_ENDPOINT,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)})
+        .then(function(){window.location.href='thank-you.html';});
+    })
+    .catch(function(){
+      if(btn){btn.disabled=false;btn.textContent=origTxt;}
+      fail('Something went wrong while uploading. Please try again or WhatsApp us.');
+    });
+});
+</script>
+</body>
+</html>
+

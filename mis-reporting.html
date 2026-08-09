@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIS & Reporting — The XL Academy</title>
+<meta name="description" content="Master Advanced Excel, SQL & VBA Macros in 4 months. Become an MIS Executive with placement assistance from The XL Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<style>
+  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(22,194,213,.2),transparent),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1a3276 100%)}
+  .mod-num{background:linear-gradient(135deg,#a96e00,var(--gold))}
+
+  /* Why join + ratings */
+  .platform-ratings{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;justify-content:center}
+  .p-rating{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 22px}
+  .p-rating-platform{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.3px}
+  .p-rating-score{font-size:22px;font-weight:800;color:var(--navy);line-height:1}
+  .p-rating-stars{color:var(--gold);font-size:11px;margin-top:1px}
+
+  /* Outcomes (career) */
+  .outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .outcome-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;transition:.25s}
+  .outcome-card:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+  .outcome-role{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px}
+  .salary-pill{display:inline-block;background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 13px;font-size:13px;font-weight:600;margin-bottom:10px}
+  .outcome-cos{font-size:12px;color:var(--muted);line-height:1.6}
+
+  /* Fee card */
+  .fee-wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:32px;align-items:start;max-width:920px;margin:0 auto}
+  .fee-card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);position:sticky;top:90px}
+  .fee-amount{font-size:42px;font-weight:800;color:var(--navy);line-height:1}
+  .fee-amount span{font-size:18px;font-weight:500;color:var(--muted)}
+  .fee-note{font-size:12px;color:var(--muted);margin-top:5px;margin-bottom:18px}
+  .fee-divider{height:1px;background:var(--line);margin:16px 0}
+  .fee-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0}
+  .fee-row .lbl{color:var(--muted)}.fee-row .val{font-weight:600;color:var(--navy)}
+  .fee-includes{list-style:none;display:grid;gap:8px;margin:16px 0 22px}
+  .fee-includes li{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--ink)}
+  .fee-includes li::before{content:"✓";width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0}
+  .fee-actions{display:grid;gap:10px}
+  .fee-emi{background:var(--bg-soft);border-radius:10px;padding:11px 14px;font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+  .fee-emi b{color:var(--navy)}
+  .batch-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px}
+  .batch-card h3{font-size:17px;margin-bottom:16px}
+  .batch-row{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;background:var(--bg-soft);border-radius:10px;font-size:13.5px;margin-bottom:10px}
+  .batch-row:last-child{margin-bottom:0}
+  .batch-row .info b{color:var(--navy)}
+  .batch-row .info small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .badge-open{background:#e6f9ee;color:#157a3c;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .badge-few{background:#fff3e4;color:#c85a12;border-radius:50px;padding:4px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .centres-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .centres-card h3{font-size:17px;margin-bottom:14px}
+  .centre-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .centre-tag{background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--navy)}
+  .centre-tag-online{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;border:0}
+
+  /* Market strip */
+  .market-strip{background:var(--navy);padding:64px 0;color:#fff}
+  .market-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .market-inner h2{color:#fff;font-size:clamp(22px,2.8vw,34px);margin:10px 0 14px}
+  .market-inner p{color:rgba(255,255,255,.6);font-size:15px;line-height:1.7}
+  .market-salary{font-size:40px;font-weight:800;color:var(--gold);margin-top:20px;line-height:1}
+  .market-salary-lbl{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px}
+  .mstat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .mstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px}
+  .mstat-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1}
+  .mstat-lbl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
+
+  @media(max-width:980px){
+    .outcomes-grid{grid-template-columns:repeat(2,1fr)}
+    .fee-wrap,.market-inner{grid-template-columns:1fr}
+    .fee-card{position:static}
+  }
+  @media(max-width:600px){
+    .outcomes-grid{grid-template-columns:1fr}
+  }
+</style>
+<link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="site-header"></div>
+
+<!-- Hero -->
+<section class="course-hero">
+  <div class="container course-hero-grid">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">›</span>
+        <a href="/#courses">Our Courses</a><span class="sep">›</span>
+        <span>MIS &amp; Reporting</span>
+      </nav>
+      <div class="rating" style="color:var(--gold);font-size:15px">★★★★★ <span style="color:rgba(255,255,255,.6);font-weight:400">4.8 / 5 &nbsp;·&nbsp; 1,100+ reviews</span></div>
+      <h1>MIS &amp; Reporting</h1>
+      <p class="course-hero-sub">Become the reporting backbone of any organisation. Master Excel, SQL, and VBA Macros — and step into an MIS Executive role in just 4 months.</p>
+      <div class="qbadges">
+        <span class="qbadge">⏱ <b>4 Months</b></span>
+        <span class="qbadge">🖥 <b>Online &amp; Offline</b></span>
+        <span class="qbadge">🎓 <b>Certificate Included</b></span>
+        <span class="qbadge">💼 <b>100% Placement Assistance</b></span>
+      </div>
+      <div class="course-hero-actions">
+        <button class="btn btn-primary" onclick="openModal()">Book Free Demo Class</button>
+        <a href="https://wa.me/917303609096" target="_blank" rel="noopener" class="btn btn-wa">Get Details on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-info-card">
+      <h3>What you'll master</h3>
+      <div class="info-pill"><span class="dot"></span>Advanced Excel — Formulas, Pivot, MIS Dashboards</div>
+      <div class="info-pill"><span class="dot"></span>VBA Macros — Automate repetitive reports</div>
+      <div class="info-pill"><span class="dot"></span>SQL — Data extraction for reporting</div>
+      <div class="info-pill"><span class="dot"></span>End-to-end MIS Project (P&amp;L Dashboard)</div>
+      <div class="info-pill"><span class="dot"></span>Operational Tracker — real business scenario</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Numbers -->
+<div class="highlight-strip">
+  <div class="container">
+    <div class="highlights-grid">
+      <div class="highlight-item"><div class="highlight-num">2.5K+</div><div class="highlight-lbl">Learners Trained</div></div>
+      <div class="highlight-item"><div class="highlight-num">95%</div><div class="highlight-lbl">Placement Rate</div></div>
+      <div class="highlight-item"><div class="highlight-num">4</div><div class="highlight-lbl">Curriculum Modules</div></div>
+      <div class="highlight-item"><div class="highlight-num">2</div><div class="highlight-lbl">MIS Projects</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Why Join + Ratings -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why The XL Academy</span>
+      <h2>What Makes This Program Different</h2>
+      <p>Thousands of learners have chosen The XL Academy over self-paced online platforms. Here's why.</p>
+    </div>
+    <div class="why-grid">
+      <div class="feature">
+        <div class="ic">🎯</div>
+        <h3>Industry-Aligned Curriculum</h3>
+        <p>Regularly updated with the latest tools, technologies, market demands and industry hiring requirements.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">🛠️</div>
+        <h3>Hands-On Learning from Day One</h3>
+        <p>Learn by doing with live projects, real datasets, and practical assignments &amp; become Master in industry tools through practical training.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">👨‍🏫</div>
+        <h3>Industry Expert Trainers</h3>
+        <p>Get trained by experienced professionals with 10+ years of industry expertise, who bring real-world insights, practical knowledge, and interview-focused guidance to every session.</p>
+      </div>
+      <div class="feature">
+        <div class="ic">💼</div>
+        <h3>100% Placement Support</h3>
+        <p>Get job-ready with Resume Building, LinkedIn Optimization, Mock Interviews, Career Mentoring &amp; Placement Assistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Outcomes — shown BEFORE curriculum so user sees the destination first -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where You'll Land</span>
+      <h2>Where Our MIS Graduates Work</h2>
+      <p>MIS is one of the most consistently hired roles in India — demand spans banking, insurance, e-commerce, and manufacturing.</p>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <div class="outcome-role">📋 MIS Executive</div>
+        <div class="salary-pill">₹3 – 6 LPA</div>
+        <div class="outcome-cos">Max Life, ICICI, HDFC Bank, Axis Bank, Kotak, SBI Life</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-role">📊 MIS Analyst</div>
+        <div class="salary-pill">₹4 – 7 LPA</div>
+        <div class="outcome-cos">Hitachi, Mahindra, DHL, Flipkart, TCS, Wipro</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-role">📈 Reporting Analyst</div>
+        <div class="salary-pill">₹3.5 – 6 LPA</div>
+        <div class="outcome-cos">Infopro Learning, Genpact, Mphasis, Hexaware, EXL</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-role">⚙️ Operations Analyst</div>
+        <div class="salary-pill">₹3 – 5.5 LPA</div>
+        <div class="outcome-cos">Spectrum, Berina Cosmetics, Zepto, Urban Company, Nykaa</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-role">💼 Business Analyst (Jr.)</div>
+        <div class="salary-pill">₹4 – 7 LPA</div>
+        <div class="outcome-cos">Deloitte, EY, KPMG, Accenture, Capgemini, IBM</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-role">📑 Data Entry → Analyst</div>
+        <div class="salary-pill">₹3 – 5 LPA</div>
+        <div class="outcome-cos">Any company with an MIS team — this is the upgrade path</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fee + Batch -->
+<section class="section" style="background:var(--bg-soft);padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Enroll Today</span>
+      <h2>Fee, Batches &amp; Centres</h2>
+      <p>Transparent pricing. EMI options available. Seats are limited per batch — reserve yours early.</p>
+    </div>
+    <div class="fee-wrap">
+      <div class="fee-card">
+        <div class="fee-amount">₹18,000 <span>+ Tax</span></div>
+        <div class="fee-note">* All study materials, projects &amp; certificate included</div>
+        <div class="fee-divider"></div>
+        <div class="fee-row"><span class="lbl">Duration</span><span class="val">4 Months</span></div>
+        <div class="fee-row"><span class="lbl">Mode</span><span class="val">Online &amp; Offline</span></div>
+        <div class="fee-row"><span class="lbl">Batch Size</span><span class="val">Max 20 Students</span></div>
+        <div class="fee-row"><span class="lbl">Certificate</span><span class="val">The XL Academy</span></div>
+        <div class="fee-divider"></div>
+        <ul class="fee-includes">
+          <li>70+ hours live instructor-led sessions</li>
+          <li>60+ Notes + Assignments</li>
+          <li>4+ Live projects</li>
+          <li>Doubt-clearing after every module</li>
+          <li>Resume &amp; LinkedIn profile review</li>
+          <li>Mock interviews + placement drives</li>
+        </ul>
+        <div class="fee-actions">
+          <button class="btn btn-primary" onclick="openModal()" style="width:100%;justify-content:center">Book Free Demo Class</button>
+          <a href="tel:+917303609096" class="btn btn-call" style="width:100%;justify-content:center">Talk to a Counsellor</a>
+        </div>
+        <div class="fee-emi">💳 EMI starts from <b>₹2,999/month</b> &nbsp;·&nbsp; <a href="education-loan" style="color:var(--orange-d);font-weight:600">Education loan available</a></div>
+      </div>
+      <div>
+        <div class="batch-card">
+          <h3>Upcoming Batches</h3>
+          <div class="batch-row"><div class="info"><b>Weekday Batch</b><small>Mon to Fri — 10:00 AM to 6:00 PM</small></div><span class="badge-open">Starting Soon</span></div>
+          <div class="batch-row"><div class="info"><b>Weekend Batch</b><small>Sat &amp; Sun — 10:00 AM to 6:00 PM</small></div><span class="badge-few">Few Seats Left</span></div>
+          <div class="batch-row"><div class="info"><b>Online Batch</b><small>Flexible — recorded backups included</small></div><span class="badge-open">Open</span></div>
+        </div>
+        <div class="centres-card">
+          <h3>Available Centres</h3>
+          <div class="centre-tags">
+            <a href="branch-delhi" class="centre-tag">📍 New Delhi (HQ)</a>
+            <a href="branch-gurugram" class="centre-tag">📍 Gurugram</a>
+            <a href="branch-noida" class="centre-tag">📍 Noida</a>
+            <a href="branch-bangalore" class="centre-tag">📍 Bangalore</a>
+            <a href="branch-pune" class="centre-tag">📍 Pune</a>
+            <a href="branch-mumbai" class="centre-tag">📍 Mumbai</a>
+            <a href="https://wa.me/917303609096?text=Hi%2C%20I%20am%20interested%20in%20The%20XL%20Academy%20%E2%80%94%20Online%20batch%20for%20the%20MIS%20%26%20Reporting%20course.%20Please%20share%20the%20batch%20schedule%20and%20fee%20details." target="_blank" rel="noopener" class="centre-tag centre-tag-online">🌐 Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Market Stats -->
+<section class="market-strip">
+  <div class="container">
+    <div class="market-inner">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Market Opportunity</span>
+        <h2>MIS Executives Are Hired in Every Industry</h2>
+        <p>Every organisation with data needs someone to report on it. MIS &amp; Reporting is one of the most stable, consistently-hired roles in India — and a proven entry point into a broader analytics career.</p>
+        <div class="market-salary">₹3 – ₹7 LPA</div>
+        <div class="market-salary-lbl">Typical salary range for MIS Executive / Analyst roles — 0 to 3 years experience</div>
+      </div>
+      <div class="mstat-grid">
+        <div class="mstat"><div class="mstat-num">20%</div><div class="mstat-lbl">Year-on-year growth in MIS &amp; reporting hiring</div></div>
+        <div class="mstat"><div class="mstat-num">1.4M+</div><div class="mstat-lbl">Analytics &amp; data job openings expected in India by 2027</div></div>
+        <div class="mstat"><div class="mstat-num">30K+</div><div class="mstat-lbl">Open MIS Executive roles in India on job portals at any time</div></div>
+        <div class="mstat"><div class="mstat-num">4 Mo</div><div class="mstat-lbl">Fastest route into a stable analytics-track career</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>MIS &amp; Reporting — FAQs</h2>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq"><summary>What does an MIS Executive do?</summary><div class="ans">An MIS (Management Information Systems) Executive collects, organises, and presents business data as reports and dashboards for management. They use Excel, SQL, and similar tools to create daily, weekly, and monthly reports that drive decisions.</div></details>
+      <details class="faq"><summary>Is this course suitable for someone with no computer background?</summary><div class="ans">Yes. If you can use a Windows PC and navigate basic software, you can start this course. We begin with Excel fundamentals and build up from there. Many of our students had never used Pivot Tables before joining.</div></details>
+      <details class="faq"><summary>What is the difference between MIS & Reporting and Data Analytics?</summary><div class="ans">MIS focuses on reporting, dashboards, and operational data management — the backbone of business operations. Data Analytics goes further into data-driven decision making, using SQL, Power BI, and Tableau for strategic insights. MIS is a faster, more focused path to a first job.</div></details>
+      <details class="faq"><summary>Do I need to learn programming or coding for this course?</summary><div class="ans">No coding is required. VBA Macros in Module 5 involve simple scripting — but we teach it step-by-step and it is much simpler than learning a full programming language.</div></details>
+      <details class="faq"><summary>What kind of projects will I build?</summary><div class="ans">Two industry-standard MIS projects: a monthly P&L Dashboard (built in Excel) and an Operational Tracker (built using SQL + Excel). Both are designed to be discussed in interviews as proof of skill.</div></details>
+      <details class="faq"><summary>Is EMI available?</summary><div class="ans">Yes — EMI starts at just ₹3,999/- only. Education loan options through partner NBFCs are also available. Call +91 73036 09096 for a personalised fee plan.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Launch Your MIS Career in 4 Months</h2>
+      <p>Excel, SQL, and VBA — everything an MIS Executive needs. Book your free demo and start your journey today.</p>
+      <div class="row">
+        <button class="btn btn-primary" onclick="openModal()">Book Your Free Demo</button>
+        <a href="https://wa.me/917303609096" target="_blank" rel="noopener" class="btn btn-wa">Get Details on WhatsApp</a>
+        <a href="tel:+917303609096" class="btn btn-call">Talk to a Counsellor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>window.PAGE_CONFIG = { preselect: 'MIS & Reporting' };</script>
+<script src="components.js?v=20260730a"></script>
+</body>
+</html>

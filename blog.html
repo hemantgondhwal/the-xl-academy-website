@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7974G7');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — The XL Academy</title>
+<meta name="description" content="Career tips, tutorials, and industry insights on Data Science, Data Analytics, Power BI, SQL, Python and MIS from The XL Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260730a">
+<style>
+  .course-hero{background:radial-gradient(800px 400px at 75% -10%,rgba(22,194,213,.2),transparent),linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1a3276 100%)}
+</style>
+<link rel="icon" type="image/png" href="images/fav.png"><link rel="apple-touch-icon" href="images/fav.png">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7974G7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="site-header"></div>
+
+<section class="course-hero" style="padding:52px 0 64px">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><span>Blog</span></nav>
+    <div class="rating" style="color:var(--gold);font-size:15px">✍️ <span style="color:rgba(255,255,255,.6);font-weight:400">Insights &amp; Career Tips</span></div>
+    <h1 class="course-hero-h1" style="color:#fff;font-size:clamp(30px,4.6vw,52px);font-weight:800;margin:12px 0 12px">The XL Academy Blog</h1>
+    <p class="course-hero-sub">Tutorials, career guidance, and industry trends across Data Science, Analytics, Power BI, SQL, Python &amp; MIS.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-grid" id="blogGrid">
+      <p id="blogState" style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0">Loading posts…</p>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="components.js?v=20260730a"></script>
+<script>
+// Single self-hosted backend for blog + SEO. No external services.
+var BLOG_ENDPOINT = 'admin-api.php';
+
+var grid = document.getElementById('blogGrid');
+var state = document.getElementById('blogState');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function fmtDate(d){ if(!d) return ''; var t=new Date(d); if(isNaN(t)) return esc(d);
+  return t.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}); }
+
+function card(p){
+  var img = p.image
+    ? '<div class="blog-thumb"><img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy" onerror="this.parentNode.classList.add(\'ph\');this.remove()"></div>'
+    : '<div class="blog-thumb ph"></div>';
+  return '<a class="blog-card" href="blog-post?slug='+encodeURIComponent(p.slug||p.id)+'">'
+    + img
+    + '<div class="blog-card-body">'
+    +   (p.category?'<span class="blog-cat">'+esc(p.category)+'</span>':'')
+    +   '<h3>'+esc(p.title)+'</h3>'
+    +   '<p>'+esc(p.excerpt||'')+'</p>'
+    +   '<div class="blog-meta">'+esc(p.author||'The XL Academy')+' · '+fmtDate(p.date)+'</div>'
+    + '</div></a>';
+}
+
+if(!BLOG_ENDPOINT || BLOG_ENDPOINT.indexOf('PASTE_')===0){
+  state.textContent = 'Blog is not configured yet.';
+} else {
+  fetch(BLOG_ENDPOINT + '?action=list')
+    .then(function(r){return r.json();})
+    .then(function(data){
+      var posts = (data && data.posts) || [];
+      if(!posts.length){ state.textContent = 'No posts published yet. Check back soon!'; return; }
+      grid.innerHTML = posts.map(card).join('');
+    })
+    .catch(function(){ state.textContent = 'Could not load posts. Please try again later.'; });
+}
+</script>
+</body>
+</html>

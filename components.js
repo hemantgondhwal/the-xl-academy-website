@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   /* ─────────────────────────────────────────────
@@ -32,10 +32,18 @@
     <ul class="menu" id="menu">
       <li class="has-drop"><a href="/#courses">Our Courses</a>
         <ul class="dropdown">
+          <li style="font-weight:700;padding:6px 14px 2px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--orange)">Career Programs</li>
           <li><a href="data-science">Data Science with ML</a></li>
           <li><a href="data-analytics-python">Data Analytics &amp; Python</a></li>
           <li><a href="data-analytics">Data Analytics</a></li>
           <li><a href="mis-reporting">MIS &amp; Reporting</a></li>
+          <li style="font-weight:700;padding:10px 14px 2px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--orange);border-top:1px solid var(--line)">Modular Courses</li>
+          <li><a href="python">Python &amp; Pandas</a></li>
+          <li><a href="machine-learning">Machine Learning</a></li>
+          <li><a href="sql-server">SQL Server</a></li>
+          <li><a href="power-bi">Power BI</a></li>
+          <li><a href="tableau">Tableau</a></li>
+          <li><a href="advanced-excel">Advanced Excel</a></li>
         </ul>
       </li>
       <li class="has-drop"><a href="#">Branches</a>
@@ -54,6 +62,7 @@
         <ul class="dropdown">
           <li><a href="pay-now">Pay Now</a></li>
           <li><a href="education-loan">Education Loan</a></li>
+          <li><a href="blog">Blog</a></li>
         </ul>
       </li>
     </ul>
@@ -103,6 +112,11 @@
           <li><a href="data-analytics-python">Data Analytics &amp; Python</a></li>
           <li><a href="data-analytics">Data Analytics</a></li>
           <li><a href="mis-reporting">MIS &amp; Reporting</a></li>
+          <li><a href="python">Python &amp; Pandas</a></li>
+          <li><a href="power-bi">Power BI</a></li>
+          <li><a href="tableau">Tableau</a></li>
+          <li><a href="sql-server">SQL Server</a></li>
+          <li><a href="advanced-excel">Advanced Excel</a></li>
         </ul>
         <h4 class="foot-h4-next">Blog</h4>
         <ul>

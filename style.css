@@ -315,9 +315,9 @@ footer a:hover{color:var(--orange)}
 .companies-strip{background:var(--bg-soft);padding:44px 0}
 .co-label{text-align:center;font-size:13px;font-weight:700;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:26px}
 .co-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;align-items:center}
-.co-logo{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 24px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(8,16,72,.04);transition:all .25s ease}
+.co-logo{background:#fff;border:1.5px solid var(--line);border-radius:14px;width:160px;height:58px;padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(8,16,72,.04);transition:all .25s ease;box-sizing:border-box}
 .co-logo:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 6px 18px rgba(8,16,72,.1)}
-.co-logo svg{height:24px;width:auto;display:block}
+.co-logo svg{max-width:100%;max-height:28px;width:auto;height:auto;display:block;margin:0 auto}
 
 /* =============================================
    PLACEMENT GALLERY

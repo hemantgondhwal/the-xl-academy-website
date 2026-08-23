@@ -117,6 +117,10 @@
           <li><a href="sql-server">SQL Server</a></li>
           <li><a href="advanced-excel">Advanced Excel</a></li>
         </ul>
+        <h4 class="foot-h4-next" style="margin-top:16px">Blog</h4>
+        <ul>
+          <li><a href="blog">Blog &amp; Insights</a></li>
+        </ul>
       </div>
       <div>
         <h4>Contact</h4>
@@ -130,6 +134,7 @@
     <div class="foot-bottom">
       <div>© 2026 The XL Academy. All rights reserved.</div>
       <div style="display:flex;gap:18px">
+        <a href="blog">Blog</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-conditions.html">Terms &amp; Conditions</a>
         <a href="cancellation-refund.html">Refund Policy</a>

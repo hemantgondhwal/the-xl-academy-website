@@ -62,7 +62,6 @@
         <ul class="dropdown">
           <li><a href="pay-now">Pay Now</a></li>
           <li><a href="education-loan">Education Loan</a></li>
-          <li><a href="blog">Blog</a></li>
         </ul>
       </li>
     </ul>
@@ -117,10 +116,6 @@
           <li><a href="tableau">Tableau</a></li>
           <li><a href="sql-server">SQL Server</a></li>
           <li><a href="advanced-excel">Advanced Excel</a></li>
-        </ul>
-        <h4 class="foot-h4-next">Blog</h4>
-        <ul>
-          <li><a href="blog">Latest Articles</a></li>
         </ul>
       </div>
       <div>

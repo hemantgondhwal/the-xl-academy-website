@@ -242,6 +242,58 @@ footer a:hover{color:var(--orange)}
 .float-cta a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:var(--shadow)}
 .fc-wa{background:#25d366}.fc-call{background:#1a8fd1}
 
+/* Mobile Bottom Sticky Bar */
+.mobile-bottom-bar{display:none}
+@media(max-width:768px){
+  .float-cta{display:none!important}
+  body{padding-bottom:76px}
+  .mobile-bottom-bar{
+    display:flex;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    background:#0d1833;
+    padding:9px 12px;
+    padding-bottom:max(9px, env(safe-area-inset-bottom));
+    gap:8px;
+    align-items:center;
+    box-shadow:0 -4px 20px rgba(0,0,0,.28);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .mbb-btn{
+    flex:1;
+    height:46px;
+    border-radius:12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-size:13.5px;
+    font-weight:700;
+    line-height:1;
+    text-decoration:none;
+    color:#fff;
+    border:0;
+    cursor:pointer;
+    font-family:inherit;
+    white-space:nowrap;
+    padding:0 8px;
+    transition:transform .12s ease, opacity .12s ease;
+  }
+  .mbb-btn:active{transform:scale(.96);opacity:.9}
+  .mbb-btn svg{flex-shrink:0}
+  .mbb-call{background:#1e2c47;border:1px solid rgba(255,255,255,.18)}
+  .mbb-wa{background:#25d366}
+  .mbb-demo{background:linear-gradient(135deg, #f7941d, #e8650a);box-shadow:0 4px 14px rgba(232,101,10,.35)}
+}
+@media(max-width:380px){
+  .mobile-bottom-bar{gap:5px;padding:8px 8px;padding-bottom:max(8px, env(safe-area-inset-bottom))}
+  .mbb-btn{height:42px;font-size:12px;gap:4px;border-radius:10px;padding:0 4px}
+  .mbb-btn svg{width:14px;height:14px}
+}
+
 /* =============================================
    COURSE PAGE SPECIFIC STYLES
    ============================================= */

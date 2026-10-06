@@ -113,8 +113,9 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .course{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:.25s}
 .course:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.course .thumb{height:140px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.course .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.course .thumb{height:155px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.course .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.course:hover .thumb img{transform:scale(1.04)}
 .thumb-python{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
 .thumb-ds{background:linear-gradient(135deg,var(--orange),var(--orange-d))}
 .thumb-da{background:linear-gradient(135deg,var(--cyan),#0e8fa0)}

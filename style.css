@@ -238,7 +238,7 @@ footer a:hover{color:var(--orange)}
 .consent{display:flex;gap:9px;font-size:12px;color:var(--muted);margin:6px 0 16px;align-items:flex-start}
 .consent input{margin-top:3px}
 .form-msg{font-size:13px;margin-top:12px;text-align:center}
-.float-cta{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;gap:10px}
+.float-cta{position:fixed;right:18px;bottom:85px;z-index:90;display:flex;flex-direction:column;gap:10px}
 .float-cta a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:var(--shadow)}
 .fc-wa{background:#25d366}.fc-call{background:#1a8fd1}
 

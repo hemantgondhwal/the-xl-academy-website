@@ -191,6 +191,7 @@
     setActiveNav();
     initHamburger();
     initModalForm();
+    initTawk();
   }
 
   /* ─────────────────────────────────────────────
@@ -284,6 +285,27 @@
         .then(function () { done(true); })
         .catch(function () { done(false); });
     });
+  }
+
+  /* ─────────────────────────────────────────────
+     TAWK.TO LIVE CHAT
+  ───────────────────────────────────────────── */
+  function initTawk() {
+    if (window.__tawkInitialized) return;
+    window.__tawkInitialized = true;
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_LoadStart = new Date();
+    var s1 = document.createElement('script');
+    var s0 = document.getElementsByTagName('script')[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6767f8c349e2fd8dfefbe2a2/1ifn27f4g';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    if (s0 && s0.parentNode) {
+      s0.parentNode.insertBefore(s1, s0);
+    } else {
+      (document.head || document.body).appendChild(s1);
+    }
   }
 
   /* ─────────────────────────────────────────────

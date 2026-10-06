@@ -23,6 +23,7 @@ out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.zip
 
 # OS / Editor files
 .DS_Store

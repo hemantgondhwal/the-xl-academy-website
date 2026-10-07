@@ -170,8 +170,8 @@
   <div class="modal-card">
     <div class="modal-head">
       <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
-      <h3>Book a <span>Free</span> Demo Class. NOW!</h3>
-      <p>Our counsellor will call you within 24 hours.</p>
+      <h3 id="modalTitle">Book a <span>Free</span> Demo Class. NOW!</h3>
+      <p id="modalSub">Our counsellor will call you within 24 hours.</p>
     </div>
     <div class="modal-body">
       <form id="admissionForm" novalidate>
@@ -184,7 +184,7 @@
         </div>
         <div class="field"><label>Email Address <span class="req">*</span></label><input name="email" type="email" required placeholder="you@example.com"></div>
         <div class="field"><label>Preferred City <span class="req">*</span></label><input name="city" type="text" required placeholder="e.g. Delhi, Mumbai, Bangalore..."></div>
-        <button class="btn-submit" type="submit">Submit Enquiry →</button>
+        <button class="btn-submit" type="submit" id="modalSubmitBtn">Submit Enquiry →</button>
         <div class="form-msg" id="formMsg"></div>
         <p class="modal-foot">By submitting, you agree to our <a href="terms-conditions.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>. We never spam.</p>
       </form>
@@ -305,12 +305,14 @@
         }
       }
 
+      var coursePrefix = form.dataset.course ? ' [' + form.dataset.course + ']' : '';
+      var actionPrefix = form.dataset.actionType ? form.dataset.actionType + coursePrefix + ' | ' : '';
       var payload = new URLSearchParams({
         name: form.elements['name'].value,
         mobile: form.elements['mobile'].value,
         email: form.elements['email'].value,
         city: form.elements['city'].value,
-        source: (document.title || '') + ' | ' + location.href
+        source: actionPrefix + (document.title || '') + ' | ' + location.href
       });
 
       if (!DEMO_ENDPOINT || DEMO_ENDPOINT.indexOf('PASTE_') === 0) {
@@ -359,13 +361,56 @@
   /* ─────────────────────────────────────────────
      GLOBAL HELPERS (called from onclick in HTML)
   ───────────────────────────────────────────── */
-  window.openModal = function () {
+  window.openModal = function (title, subtitle, courseName, buttonText) {
     var m = document.getElementById('modal');
-    if (m) { m.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    if (!m) return;
+    var titleEl = document.getElementById('modalTitle');
+    var subEl = document.getElementById('modalSub');
+    var btnEl = document.getElementById('modalSubmitBtn');
+    var form = document.getElementById('admissionForm');
+
+    if (title && titleEl) {
+      titleEl.innerHTML = title;
+    } else if (titleEl) {
+      titleEl.innerHTML = 'Book a <span>Free</span> Demo Class. NOW!';
+    }
+
+    if (subtitle && subEl) {
+      subEl.textContent = subtitle;
+    } else if (subEl) {
+      subEl.textContent = 'Our counsellor will call you within 24 hours.';
+    }
+
+    if (btnEl) {
+      btnEl.textContent = buttonText || (title && title.indexOf('Syllabus') !== -1 ? 'Download Syllabus Now →' : 'Submit Enquiry →');
+    }
+
+    if (form) {
+      form.dataset.course = courseName || '';
+      form.dataset.actionType = (title && title.indexOf('Syllabus') !== -1) ? 'Download Syllabus' : 'Demo Booking';
+    }
+
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
   };
+
   window.closeModal = function () {
     var m = document.getElementById('modal');
-    if (m) { m.classList.remove('open'); document.body.style.overflow = ''; }
+    if (m) {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+      var titleEl = document.getElementById('modalTitle');
+      var subEl = document.getElementById('modalSub');
+      var btnEl = document.getElementById('modalSubmitBtn');
+      var form = document.getElementById('admissionForm');
+      if (titleEl) titleEl.innerHTML = 'Book a <span>Free</span> Demo Class. NOW!';
+      if (subEl) subEl.textContent = 'Our counsellor will call you within 24 hours.';
+      if (btnEl) btnEl.textContent = 'Submit Enquiry →';
+      if (form) {
+        delete form.dataset.course;
+        delete form.dataset.actionType;
+      }
+    }
   };
   window.scrollTml = function (dir) {
     var t = document.getElementById('tmlTrack');

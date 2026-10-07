@@ -122,9 +122,9 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .thumb-da{background:linear-gradient(135deg,var(--cyan),#0e8fa0)}
 .thumb-mis{background:linear-gradient(135deg,var(--gold),#c98500)}
 .th-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:3px 10px;font-size:10px;font-weight:600;color:#fff;letter-spacing:.3px;backdrop-filter:blur(4px)}
-.course .body{padding:22px 20px;display:flex;flex-direction:column;flex:1}
-.rating{display:inline-flex;align-items:center;gap:6px;background:#fff9e6;border:1px solid #ffe180;border-radius:20px;padding:3px 10px;color:#d48806;font-size:13px;font-weight:700;width:fit-content;margin-bottom:10px}
-.rating span{color:#5b6478;font-weight:600;font-size:12.5px}
+.course .rating{display:inline-flex;align-items:center;gap:6px;background:#fff9e6;border:1px solid #ffe180;border-radius:20px;padding:3px 10px;color:#d48806;font-size:13px;font-weight:700;width:fit-content;margin-bottom:10px}
+.course .rating span{color:#5b6478;font-weight:600;font-size:12.5px}
+.course-hero .rating{display:none!important}
 .course h3{font-size:18.5px;font-weight:700;color:#1B2B6B;margin-bottom:8px;line-height:1.25}
 .course .sub{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.45}
 .course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:20px;display:grid;gap:8px;padding-top:12px;border-top:1px dashed #dbe5f5}

@@ -110,11 +110,11 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .feature p{font-size:14px;color:var(--muted)}
 
 /* ---------- Courses ---------- */
-.courses{background:#f1f4fb;border-top:1px solid #dce2f0;border-bottom:1px solid #dce2f0}
+.courses{background:#f5f8fc;border-top:1px solid #e2eaf6;border-bottom:1px solid #e2eaf6}
 .course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.course{background:#fff;border-radius:var(--radius);overflow:hidden;border:2px solid #1B2B6B;display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;box-shadow:0 12px 28px -14px rgba(27,43,107,.25)}
-.course:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 20px 40px -15px rgba(27,43,107,.35), 0 0 0 1px var(--orange)}
-.course .thumb{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:2px solid #1B2B6B;background:#fff}
+.course{background:#fff;border-radius:var(--radius);overflow:hidden;border:2px solid #a8c7fa;display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;box-shadow:0 10px 28px -12px rgba(27,43,107,.1)}
+.course:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 20px 38px -12px rgba(247,148,29,.28), 0 0 0 1px var(--orange)}
+.course .thumb{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:1.5px solid #dbe7fa;background:#fff}
 .course .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
 .course:hover .thumb img{transform:scale(1.04)}
 .thumb-python{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
@@ -127,7 +127,7 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .rating span{color:#5b6478;font-weight:600;font-size:12.5px}
 .course h3{font-size:18.5px;font-weight:700;color:#1B2B6B;margin-bottom:8px;line-height:1.25}
 .course .sub{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.45}
-.course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:20px;display:grid;gap:8px;padding-top:12px;border-top:1px dashed #dbe1ee}
+.course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:20px;display:grid;gap:8px;padding-top:12px;border-top:1px dashed #dbe5f5}
 .course ul li{display:flex;gap:8px;align-items:baseline}
 .course ul li b{color:#1B2B6B;min-width:68px;font-weight:700}
 .course .btn{justify-content:center}
@@ -135,8 +135,8 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .course-actions .btn{width:100%;justify-content:center;padding:12px 16px;font-size:14px;font-weight:700;border-radius:50px}
 .btn-syllabus{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;box-shadow:0 8px 18px -6px rgba(255,122,24,.6);border:0;display:inline-flex;align-items:center;gap:7px}
 .btn-syllabus:hover{transform:translateY(-2px);box-shadow:0 12px 24px -6px rgba(255,122,24,.75);color:#fff}
-.course-actions .btn-outline{background:#fff;color:#1B2B6B;border:2px solid #1B2B6B}
-.course-actions .btn-outline:hover{background:#1B2B6B;color:#fff;border-color:#1B2B6B;transform:translateY(-2px)}
+.course-actions .btn-outline{background:#fff;color:#1B2B6B;border:1.5px solid #a8c7fa}
+.course-actions .btn-outline:hover{background:#f0f6ff;color:var(--orange-d);border-color:var(--orange);transform:translateY(-2px)}
 
 /* ---------- Skills ---------- */
 .skills-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}

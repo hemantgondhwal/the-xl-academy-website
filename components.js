@@ -33,8 +33,8 @@
       <li class="has-drop"><a href="/#courses">Our Courses</a>
         <ul class="dropdown">
           <li style="font-weight:700;padding:6px 14px 2px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--orange)">Career Programs</li>
-          <li><a href="data-science">Data Science with ML</a></li>
-          <li><a href="data-analytics-python">Data Analytics &amp; Python</a></li>
+          <li><a href="data-science">Data Science with ML &amp; Generative AI</a></li>
+          <li><a href="data-analytics-python">Data Analytics with Python &amp; Generative AI</a></li>
           <li><a href="data-analytics">Data Analytics</a></li>
           <li><a href="mis-reporting">MIS &amp; Reporting</a></li>
           <li style="font-weight:700;padding:10px 14px 2px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--orange);border-top:1px solid var(--line)">Modular Courses</li>
@@ -107,8 +107,8 @@
       <div>
         <h4>Courses</h4>
         <ul>
-          <li><a href="data-science">Data Science with ML</a></li>
-          <li><a href="data-analytics-python">Data Analytics &amp; Python</a></li>
+          <li><a href="data-science">Data Science with ML &amp; Generative AI</a></li>
+          <li><a href="data-analytics-python">Data Analytics with Python &amp; Generative AI</a></li>
           <li><a href="data-analytics">Data Analytics</a></li>
           <li><a href="mis-reporting">MIS &amp; Reporting</a></li>
           <li><a href="python">Python &amp; Pandas</a></li>

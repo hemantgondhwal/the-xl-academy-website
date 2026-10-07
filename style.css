@@ -110,11 +110,11 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .feature p{font-size:14px;color:var(--muted)}
 
 /* ---------- Courses ---------- */
-.courses{background:var(--bg-soft)}
-.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.course{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:.25s}
-.course:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.course .thumb{height:155px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.courses{background:#f1f4fb;border-top:1px solid #dce2f0;border-bottom:1px solid #dce2f0}
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.course{background:#fff;border-radius:var(--radius);overflow:hidden;border:2px solid #1B2B6B;display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;box-shadow:0 12px 28px -14px rgba(27,43,107,.25)}
+.course:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 20px 40px -15px rgba(27,43,107,.35), 0 0 0 1px var(--orange)}
+.course .thumb{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:2px solid #1B2B6B;background:#fff}
 .course .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
 .course:hover .thumb img{transform:scale(1.04)}
 .thumb-python{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
@@ -122,21 +122,21 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .thumb-da{background:linear-gradient(135deg,var(--cyan),#0e8fa0)}
 .thumb-mis{background:linear-gradient(135deg,var(--gold),#c98500)}
 .th-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:3px 10px;font-size:10px;font-weight:600;color:#fff;letter-spacing:.3px;backdrop-filter:blur(4px)}
-.course .body{padding:20px;display:flex;flex-direction:column;flex:1}
-.rating{color:var(--gold);font-size:14px;font-weight:600;margin-bottom:8px}
-.rating span{color:var(--muted);font-weight:400}
-.course h3{font-size:18px;margin-bottom:6px}
-.course .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
-.course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:18px;display:grid;gap:7px}
-.course ul li{display:flex;gap:8px}
-.course ul li b{color:var(--navy);min-width:64px;font-weight:600}
+.course .body{padding:22px 20px;display:flex;flex-direction:column;flex:1}
+.rating{display:inline-flex;align-items:center;gap:6px;background:#fff9e6;border:1px solid #ffe180;border-radius:20px;padding:3px 10px;color:#d48806;font-size:13px;font-weight:700;width:fit-content;margin-bottom:10px}
+.rating span{color:#5b6478;font-weight:600;font-size:12.5px}
+.course h3{font-size:18.5px;font-weight:700;color:#1B2B6B;margin-bottom:8px;line-height:1.25}
+.course .sub{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.45}
+.course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:20px;display:grid;gap:8px;padding-top:12px;border-top:1px dashed #dbe1ee}
+.course ul li{display:flex;gap:8px;align-items:baseline}
+.course ul li b{color:#1B2B6B;min-width:68px;font-weight:700}
 .course .btn{justify-content:center}
-.course-actions{margin-top:auto;display:flex;flex-direction:column;gap:8px}
-.course-actions .btn{width:100%;justify-content:center;padding:11px 16px;font-size:13.5px;border-radius:50px}
+.course-actions{margin-top:auto;display:flex;flex-direction:column;gap:9px}
+.course-actions .btn{width:100%;justify-content:center;padding:12px 16px;font-size:14px;font-weight:700;border-radius:50px}
 .btn-syllabus{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;box-shadow:0 8px 18px -6px rgba(255,122,24,.6);border:0;display:inline-flex;align-items:center;gap:7px}
 .btn-syllabus:hover{transform:translateY(-2px);box-shadow:0 12px 24px -6px rgba(255,122,24,.75);color:#fff}
-.course-actions .btn-outline{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
-.course-actions .btn-outline:hover{border-color:var(--orange);color:var(--orange-d);background:var(--bg-soft);transform:translateY(-2px)}
+.course-actions .btn-outline{background:#fff;color:#1B2B6B;border:2px solid #1B2B6B}
+.course-actions .btn-outline:hover{background:#1B2B6B;color:#fff;border-color:#1B2B6B;transform:translateY(-2px)}
 
 /* ---------- Skills ---------- */
 .skills-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}

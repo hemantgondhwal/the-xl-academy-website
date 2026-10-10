@@ -110,33 +110,122 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
 .feature p{font-size:14px;color:var(--muted)}
 
 /* ---------- Courses ---------- */
-.courses{background:#f5f8fc;border-top:1px solid #e2eaf6;border-bottom:1px solid #e2eaf6}
-.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.course{background:#fff;border-radius:var(--radius);overflow:hidden;border:2px solid #a8c7fa;display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;box-shadow:0 10px 28px -12px rgba(27,43,107,.1)}
-.course:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 20px 38px -12px rgba(247,148,29,.28), 0 0 0 1px var(--orange)}
-.course .thumb{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;border-bottom:1.5px solid #dbe7fa;background:#fff}
-.course .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
-.course:hover .thumb img{transform:scale(1.04)}
-.thumb-python{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
-.thumb-ds{background:linear-gradient(135deg,var(--orange),var(--orange-d))}
-.thumb-da{background:linear-gradient(135deg,var(--cyan),#0e8fa0)}
-.thumb-mis{background:linear-gradient(135deg,var(--gold),#c98500)}
-.th-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:3px 10px;font-size:10px;font-weight:600;color:#fff;letter-spacing:.3px;backdrop-filter:blur(4px)}
-.course .rating{display:inline-flex;align-items:center;gap:6px;background:#fff9e6;border:1px solid #ffe180;border-radius:20px;padding:3px 10px;color:#d48806;font-size:13px;font-weight:700;width:fit-content;margin-bottom:10px}
-.course .rating span{color:#5b6478;font-weight:600;font-size:12.5px}
+.courses{background:#f8faff;border-top:1px solid #e2eaf6;border-bottom:1px solid #e2eaf6}
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:stretch}
+.course{
+  background:#fff;
+  border-radius:20px;
+  border:1px solid #e2eaf6;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:32px 26px 28px;
+  position:relative;
+  box-shadow:0 4px 20px rgba(15,26,66,.04);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.course:hover{
+  transform:translateY(-6px);
+  border-color:#a8c7fa;
+  box-shadow:0 16px 36px rgba(15,26,66,.09);
+}
+.course .thumb{display:none}
+.course .rating{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:14px;
+  font-size:14.5px;
+  background:transparent;
+  border:none;
+  padding:0;
+  width:auto;
+}
+.course .rating .stars{
+  color:#f59e0b;
+  letter-spacing:1px;
+  font-size:14.5px;
+}
+.course .rating .score, .course .rating span{
+  color:#4b5563;
+  font-weight:500;
+  font-size:14.5px;
+}
 .course-hero .rating{display:none!important}
-.course h3{font-size:18.5px;font-weight:700;color:#1B2B6B;margin-bottom:8px;line-height:1.25}
-.course .sub{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.45}
-.course ul{list-style:none;font-size:13px;color:var(--ink);margin-bottom:20px;display:grid;gap:8px;padding-top:12px;border-top:1px dashed #dbe5f5}
-.course ul li{display:flex;gap:8px;align-items:baseline}
-.course ul li b{color:#1B2B6B;min-width:68px;font-weight:700}
-.course .btn{justify-content:center}
-.course-actions{margin-top:auto;display:flex;flex-direction:column;gap:9px}
-.course-actions .btn{width:100%;justify-content:center;padding:12px 16px;font-size:14px;font-weight:700;border-radius:50px}
-.btn-syllabus{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;box-shadow:0 8px 18px -6px rgba(255,122,24,.6);border:0;display:inline-flex;align-items:center;gap:7px}
-.btn-syllabus:hover{transform:translateY(-2px);box-shadow:0 12px 24px -6px rgba(255,122,24,.75);color:#fff}
-.course-actions .btn-outline{background:#fff;color:#1B2B6B;border:1.5px solid #a8c7fa}
-.course-actions .btn-outline:hover{background:#f0f6ff;color:var(--orange-d);border-color:var(--orange);transform:translateY(-2px)}
+.course h3{
+  font-size:20px;
+  font-weight:800;
+  color:#1B2B6B;
+  margin-bottom:10px;
+  line-height:1.28;
+  letter-spacing:-.2px;
+  min-height:52px;
+}
+.course .sub{
+  font-size:13.5px;
+  color:#64748b;
+  margin-bottom:24px;
+  line-height:1.5;
+  min-height:42px;
+}
+.course ul{
+  list-style:none;
+  font-size:13.5px;
+  color:var(--ink);
+  margin-bottom:28px;
+  padding:0;
+  display:grid;
+  gap:12px;
+  border-top:none;
+}
+.course ul li{
+  display:grid;
+  grid-template-columns:82px 1fr;
+  align-items:baseline;
+  gap:8px;
+}
+.course ul li b{
+  color:#1B2B6B;
+  font-weight:700;
+}
+.course ul li span{
+  color:#475569;
+  font-weight:500;
+  line-height:1.4;
+}
+.course-actions{
+  margin-top:auto;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.course-actions .btn,
+.course-actions .btn-outline,
+.course-actions .btn-explore{
+  width:100%;
+  justify-content:center;
+  padding:12px 18px;
+  font-size:14.5px;
+  font-weight:700;
+  border-radius:9999px;
+  background:#fff;
+  color:#1B2B6B;
+  border:1.5px solid #d4e2f5;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  transition:all .2s ease;
+}
+.course-actions .btn:hover,
+.course-actions .btn-outline:hover,
+.course-actions .btn-explore:hover{
+  background:#f4f8ff;
+  color:#1B2B6B;
+  border-color:#1B2B6B;
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(27,43,107,.1);
+}
+.btn-syllabus{display:none}
 
 /* ---------- Skills ---------- */
 .skills-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}
@@ -566,6 +655,9 @@ html,body{overflow-x:hidden;max-width:100vw}
 
   /* Courses & Features */
   .course-grid{grid-template-columns:1fr;gap:20px}
+  .course{padding:26px 20px 22px}
+  .course h3{min-height:auto}
+  .course .sub{min-height:auto}
   .skills-grid,.skills-grid[style]{grid-template-columns:repeat(3,1fr)!important;gap:8px}
   .skill{padding:14px 6px;font-size:12px}
   .skill .ic svg{width:34px;height:34px}

@@ -234,16 +234,44 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
   margin-top:auto;
   display:flex;
   flex-direction:column;
+  gap:8px;
   width:100%;
-  padding:0 6px;
+  padding:0 4px;
 }
-.course-actions .btn,
-.course-actions .btn-outline,
+.course-actions .btn-syllabus{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  width:100%;
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:-.1px;
+  border-radius:9999px;
+  background:linear-gradient(135deg, var(--orange), var(--orange-d));
+  color:#fff;
+  border:0;
+  cursor:pointer;
+  transition:all .2s ease;
+  box-shadow:0 4px 14px -3px rgba(247,148,29,.45);
+  text-decoration:none;
+  line-height:1.2;
+}
+.course-actions .btn-syllabus:hover{
+  background:linear-gradient(135deg, #ff9f32, var(--orange));
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px -3px rgba(247,148,29,.6);
+}
+.course-actions .btn-syllabus svg{
+  flex-shrink:0;
+}
 .course-actions .btn-explore{
   width:100%;
   justify-content:center;
-  padding:11px 18px;
-  font-size:14px;
+  padding:9.5px 14px;
+  font-size:13px;
   font-weight:700;
   border-radius:9999px;
   background:#f0f7ff;
@@ -253,9 +281,8 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
   display:flex;
   align-items:center;
   transition:all .2s ease;
+  line-height:1.2;
 }
-.course-actions .btn:hover,
-.course-actions .btn-outline:hover,
 .course-actions .btn-explore:hover{
   background:#2563eb;
   color:#fff;
@@ -263,7 +290,6 @@ header.nav{position:relative;z-index:1000;background:#fff;box-shadow:0 2px 18px 
   transform:translateY(-2px);
   box-shadow:0 8px 18px -4px rgba(37,99,235,.35);
 }
-.btn-syllabus{display:none}
 
 /* ---------- Skills ---------- */
 .skills-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}
